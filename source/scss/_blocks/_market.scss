@@ -1,0 +1,403 @@
+.market {
+  padding-block: 24px;
+
+  .search {
+    &__block {
+      padding: 24px;
+      margin-top: 0;
+      display: flex;
+      align-items: end;
+    }
+
+    &__label {
+      margin-bottom: 8px;
+      position: sticky;
+    }
+
+    .custom-select {
+      width: 100%;
+    }
+
+    .custom-select__selected {
+      padding: 12px;
+    }
+    .custom-select__selected span {
+      margin-top: 0;
+    }
+
+    .btn {
+      width: max-content;
+      flex-shrink: 0;
+    }
+  }
+
+  &__list {
+    padding: 24px;
+    margin-top: 24px;
+    background-color: var(--color-substrate);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, min-content);
+    gap: 24px;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black-half);
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: min-content 1fr max-content;
+    grid-template-rows: subgrid;
+    grid-template-areas: 'icon title price' 'desc desc desc' 'features features features' 'controls controls controls';
+    grid-row: span 4;
+    gap: 24px 16px;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    grid-area: icon;
+  }
+
+  &__title-block {
+    width: 100%;
+    margin-right: auto;
+    overflow: hidden;
+    grid-area: title;
+
+    .market__caption {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      // position: relative;
+
+      /* &::before {
+        content: '';
+        width: 70px;
+        background: linear-gradient(to right, transparent, #ffffff);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+      } */
+    }
+  }
+
+  &__caption {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.16667;
+    color: var(--color-black);
+    white-space: nowrap;
+  }
+
+  &__price {
+    text-align: right;
+    grid-area: price;
+  }
+
+  &__note {
+    font-weight: 500;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__desc {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* максимум 2 строки */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    grid-area: desc;
+  }
+
+  &__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    grid-area: features;
+
+    ul {
+      flex: 1 0 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    li {
+      display: flex;
+      gap: 10px;
+
+      img {
+        margin-top: 0.2em;
+      }
+    }
+  }
+
+  &__features-caption {
+    font-weight: 600;
+    color: var(--color-black);
+    width: 100%;
+  }
+
+  &__benefits {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    li {
+      font-size: 14px;
+      line-height: 1.14286;
+      padding: 16px;
+      background-color: var(--color-substrate);
+      border-radius: 8px;
+      flex: 1 0 40%;
+    }
+  }
+
+  &__benefits-caption {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black);
+    margin-bottom: 8px;
+  }
+
+  &__controls {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    order: 10;
+    grid-area: controls;
+
+    .btn {
+      white-space: nowrap;
+      padding-inline: 32px;
+    }
+  }
+
+  &__tabs {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    order: 11;
+  }
+
+  &__tabs-nav {
+    padding: 8px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  &__tab {
+    padding: 24px;
+  }
+
+  &__prices {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    dl {
+      width: 100%;
+      margin: 0;
+    }
+
+    dl > div {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      opacity: 0.8;
+    }
+
+    dt,
+    dd {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.33333;
+      color: var(--color-black);
+      padding-block: 16px;
+      margin: 0;
+    }
+
+    dd {
+      white-space: nowrap;
+    }
+  }
+
+  &__support {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.25;
+      color: var(--color-black-half);
+      padding: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      opacity: 0.8;
+    }
+  }
+
+  &__support-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
+    color: var(--color-black);
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: $xl) {
+  .market {
+    &__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .market {
+    &__list {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .market {
+    padding-block: 24px;
+
+    .search {
+      &__block {
+        width: 100vw;
+        padding: 16px;
+        margin-inline: -24px;
+        border-radius: 0;
+      }
+    }
+
+    &__list {
+      width: 100vw;
+      margin-top: 16px;
+      margin-inline: -24px;
+      border-radius: 0;
+      gap: 16px;
+    }
+
+    &__item {
+      padding: 16px;
+    }
+
+    &__price {
+      text-align: left;
+      width: 100%;
+      order: 9;
+    }
+
+    &__caption {
+      font-size: 20px;
+    }
+
+    &__note {
+      font-size: 14px;
+    }
+
+    &__features {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &__features-caption {
+      margin-bottom: 8px;
+    }
+
+    &__benefits {
+      grid-template-columns: 100%;
+      gap: 8px;
+    }
+
+    &__tabs-nav {
+      padding-inline: 16px;
+    }
+
+    &__tab {
+      padding: 16px;
+    }
+
+    &__prices {
+      gap: 8px;
+
+      dl > div {
+        gap: 8px;
+      }
+
+      dt,
+      dd {
+        font-size: 16px;
+        padding-block: 8px;
+      }
+    }
+
+    &__support {
+      gap: 8px;
+
+      ul {
+        gap: 8px;
+      }
+
+      li {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+
+    &__support-name {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .market {
+    padding-block: 16px;
+
+    .search {
+      &__block {
+        margin-inline: -8px;
+      }
+    }
+
+    &__list {
+      padding: 16px 8px;
+      margin-inline: -8px;
+    }
+  }
+}

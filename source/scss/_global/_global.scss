@@ -1,0 +1,91 @@
+:root {
+  --color-white-half: rgb(255 255 255 / 0.54);
+  --color-black: rgb(0 0 0 / 0.87);
+  --color-black-half: rgb(0 0 0 / 0.54);
+  --color-primary: #239665;
+  --color-primary-hover: #1e6848;
+  --color-warning: #ffbb00;
+  --color-danger: #f0272b;
+  --color-substrate: #f7f7f7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-black);
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a,
+input {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+a {
+  color: var(--color-black);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

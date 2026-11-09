@@ -1,0 +1,80 @@
+.idx-services {
+  padding-block: 24px;
+
+  &__list {
+    padding: 24px;
+    background-color: var(--color-substrate);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, min-content);
+    gap: 32px 24px;
+  }
+
+  &__item:first-child {
+    padding: 40px;
+    grid-row: span 2;
+    background: #ffffff url('../img/idx-service-elev.png') no-repeat bottom left 42px;
+
+    > * {
+      max-width: 600px;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
+    color: var(--color-black-half);
+  }
+}
+
+@media (max-width: $lg) {
+  .idx-services {
+    &__item:first-child {
+      background-position: bottom center;
+      background-size: 407px auto;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .idx-services {
+    &__list {
+      padding: 16px;
+      gap: 16px;
+    }
+
+    &__item:first-child {
+      padding-bottom: 288px;
+      grid-row: span 1;
+      grid-column: span 2;
+      background-position: bottom right -20px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .idx-services {
+    .wrapper {
+      background-color: var(--color-substrate);
+    }
+
+    &__list {
+      padding-inline: 0;
+      grid-template-columns: 100%;
+      gap: 8px;
+    }
+
+    &__item:first-child {
+      padding-bottom: 242px;
+      grid-column: span 1;
+      background-position: bottom center;
+      background-size: 345px auto;
+    }
+
+    .card__desc {
+      margin-bottom: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,2 @@
+#RewriteCond %{HTTP_HOST} !^example-domain-please-change\.com [NC]
+#RewriteRule (.*) example-domain-please-change.com/$1 [R=301,L] 

@@ -1,0 +1,138 @@
+.search {
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  &__block {
+    width: 100%;
+    padding: 16px;
+    margin-top: 32px;
+    border-radius: 16px;
+    background-color: var(--color-substrate);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .custom-select {
+    &__selected {
+      > span {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14286;
+    color: var(--color-black-half);
+    position: absolute;
+    top: 7px;
+    left: 12px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: $ssm) {
+  .search {
+    &__title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    &__block {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .search {
+    &__block {
+      padding: 20px 16px;
+      margin-top: 24px;
+      border-radius: 16px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .search {
+    &__title {
+      font-size: 18px;
+    }
+
+    &__block {
+      width: 100%;
+      padding: 16px;
+      margin-top: 16px;
+      border-radius: 16px;
+    }
+
+    .custom-select {
+      &__selected,
+      &__option {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-black-half);
+        padding: 8px 12px;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &__selected {
+        padding: 12px;
+
+        > span {
+          margin-top: 0;
+        }
+      }
+
+      &__options {
+        max-height: 350px;
+        overflow: auto;
+        scrollbar-width: thin;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background-color: #ffffff;
+        isolation: isolate;
+        z-index: 2;
+      }
+
+      &__chevron {
+        transition: all 0.25s ease;
+      }
+
+      &.open {
+        .custom-select__options {
+          display: block;
+        }
+
+        .custom-select__chevron {
+          transform: scaleY(-1);
+        }
+      }
+    }
+
+    &__label {
+      margin-bottom: 8px;
+      position: static;
+    }
+  }
+}

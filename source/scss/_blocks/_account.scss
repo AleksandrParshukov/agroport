@@ -1,0 +1,211 @@
+.account {
+  padding-block: 24px;
+
+  &__content {
+    padding: 24px;
+    background-color: var(--color-substrate);
+    border-radius: 24px;
+  }
+
+  &__tabs-nav {
+    min-width: none;
+    padding: 8px;
+    margin-bottom: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    li {
+      flex: 1 0 1%;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-black);
+      white-space: nowrap;
+      text-align: center;
+      width: 100%;
+      padding: 10px 24px;
+      border-radius: 8px;
+      display: block;
+
+      &.active {
+        color: #ffffff;
+        background-color: var(--color-primary);
+      }
+    }
+  }
+
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__card {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black-half);
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+
+    &.outline {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &.empty {
+      text-align: center;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  &__card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__caption {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.16667;
+    color: var(--color-black);
+  }
+
+  &__desc {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black-half);
+    margin-top: 8px;
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__stats {
+    display: flex;
+    gap: 24px;
+
+    > li {
+      flex-direction: row;
+      flex: 1 0 20%;
+    }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      background-color: var(--color-primary);
+      border-radius: 16px;
+      display: grid;
+      place-content: center;
+    }
+  }
+
+  &__controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: $md) {
+  .account {
+    padding-block: 16px;
+
+    &__tabs-nav {
+      margin-bottom: 16px;
+      border-radius: 8px;
+
+      a {
+        padding: 8px 16px;
+      }
+    }
+
+    &__tab {
+      gap: 16px;
+    }
+
+    &__card {
+      padding: 16px;
+      gap: 16px;
+    }
+
+    &__caption {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    &__stats {
+      flex-wrap: wrap;
+
+      > li {
+        flex: 1 0 40%;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .account {
+    .wrapper {
+      background-color: var(--color-substrate);
+    }
+
+    &__content {
+      padding: 16px 0;
+      border-radius: 0;
+    }
+    
+    &__stats {
+      gap: 16px;
+
+      > li {
+        flex: 1 0 100%;
+      }
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .account {
+    &__btns {
+      width: 100%;
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+@@include('./_header.html')
+
+<section class="banner">
+  <div class="wrapper">
+    <div class="banner__content">
+      <picture class="banner__bg">
+        <source media="(min-width: 768px)" srcset="./img/banner-bg.jpg">
+        <source media="(min-width: 565px)" srcset="./img/banner-bg-sm.jpg">
+        <img src="./img/banner-bg-xs.jpg" alt="">
+      </picture>
+
+      <p class="banner__badge badge">Революция в агротехнологиях</p>
+      <p class="banner__title">
+        Подберите цифровое решение
+        <span>под задачи вашего хозяйства</span>
+      </p>
+      <div class="banner__text">
+        <h1>Агропорт</h1>
+        <span>— единая экосистема для поиска, финансирования и&nbsp;внедрения цифровых решений в&nbsp;сельском хозяйстве</span>
+      </div>
+      <form action="" class="banner__search search">
+        <p class="search__title">Найдите решение по вашим потребностям:</p>
+        <div class="search__block">
+          <div class="custom-select">
+            <p class="search__label">По задаче</p>
+            <div class="custom-select__selected" tabindex="0">
+              <span>Выбрать</span>
+
+              <svg class="custom-select__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8631 9.86321C17.2146 9.51174 17.7851 9.51174 18.1366 9.86321C18.4881 10.2147 18.4881 10.7852 18.1366 11.1367L12.6366 16.6367C12.307 16.9662 11.785 16.9866 11.4315 16.6982L11.3631 16.6367L5.86314 11.1367L5.80162 11.0683C5.51317 10.7148 5.53359 10.1928 5.86314 9.86321C6.1927 9.53366 6.71472 9.51324 7.06822 9.80169L7.13658 9.86321L11.9999 14.7265L16.8631 9.86321Z" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="custom-select__options">
+              <div class="custom-select__option" data-value="Все задачи" tabindex="0">Все задачи (6)</div>
+              <div class="custom-select__option" data-value="Автоматизация производства" tabindex="0">Автоматизация производства (18)</div>
+              <div class="custom-select__option" data-value="Склад и учет" tabindex="0">Склад и учет (12)</div>
+              <div class="custom-select__option" data-value="Телеметрия / IoT" tabindex="0">Телеметрия / IoT (8)</div>
+              <div class="custom-select__option" data-value="Аналитика и BI" tabindex="0">Аналитика и BI (6)</div>
+              <div class="custom-select__option" data-value="Инфраструктура и облака" tabindex="0">Инфраструктура и облака (14)</div>
+              <div class="custom-select__option" data-value="Информационная безопасность" tabindex="0">Информационная безопасность (5)</div>
+              <div class="custom-select__option" data-value="Телемедицина" tabindex="0">Телемедицина (7)</div>
+            </div>
+            <input type="hidden" id="search_select" name="search_select">
+          </div>
+
+          <button type="submit" class="btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0449 2C16.0404 2 20.0898 6.04954 20.0898 11.0449C20.0898 13.2168 19.3238 15.2093 18.0479 16.7686L21.7354 20.4561L21.7969 20.5244C22.0866 20.8796 22.0664 21.4042 21.7354 21.7354C21.4042 22.0665 20.8797 22.0866 20.5244 21.7969L20.4551 21.7354L16.7676 18.0479C15.2084 19.3234 13.2165 20.0898 11.0449 20.0898C6.04953 20.0898 2 16.0403 2 11.0449C2.00003 6.0496 6.04955 2.00009 11.0449 2ZM11.0449 3.80859C7.04865 3.80869 3.80863 7.04868 3.80859 11.0449C3.80859 15.0412 7.04863 18.2812 11.0449 18.2812C15.0413 18.2812 18.2812 15.0412 18.2812 11.0449C18.2812 7.04862 15.0413 3.80859 11.0449 3.80859Z" fill="currentColor" />
+            </svg>
+            <span>Найти решение</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="idx-about">
+  <div class="wrapper">
+    <ul class="idx-about__list">
+      <li class="idx-about__item card title">
+        <p class="idx-about__badge badge">Экосистема цифровизации</p>
+        <h2 class="h2">Экосистема цифровизации Агоропромышленного комплекса</h2>
+        <p>Все инструменты для успешного перехода к цифровому сельскому хозяйству в одном месте</p>
+      </li>
+      <li class="idx-about__item card">
+        <div class="card__icon"><img src="./img/search.svg" width="24" height="24" alt=""></div>
+        <p class="card__caption">Маркетплейс решений</p>
+        <p class="card__desc">Каталог из проверенных IT-решений для отраслей АПК</p>
+        <a href="#" class="card__link">
+          <span>Перейти в каталог</span>
+          <span class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.36321 7.13686C8.01174 6.78539 8.01174 6.21489 8.36321 5.86342C8.71469 5.51195 9.28518 5.51195 9.63665 5.86342L15.1367 11.3634C15.4662 11.693 15.4866 12.215 15.1982 12.5685L15.1367 12.6369L9.63665 18.1369L9.56829 18.1984C9.21479 18.4868 8.69277 18.4664 8.36321 18.1369C8.03366 17.8073 8.01324 17.2853 8.30169 16.9318L8.36321 16.8634L13.2265 12.0001L8.36321 7.13686Z" fill="currentColor" />
+            </svg>
+          </span>
+        </a>
+      </li>
+      <li class="idx-about__item card">
+        <div class="card__icon"><img src="./img/bars.svg" width="24" height="24" alt=""></div>
+        <p class="card__caption">Исследовательские услуги</p>
+        <p class="card__desc">Бесплатная оценка уровня цифровизации и персональные рекомендации</p>
+        <a href="#" class="card__link">
+          <span>Перейти в каталог</span>
+          <span class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.36321 7.13686C8.01174 6.78539 8.01174 6.21489 8.36321 5.86342C8.71469 5.51195 9.28518 5.51195 9.63665 5.86342L15.1367 11.3634C15.4662 11.693 15.4866 12.215 15.1982 12.5685L15.1367 12.6369L9.63665 18.1369L9.56829 18.1984C9.21479 18.4868 8.69277 18.4664 8.36321 18.1369C8.03366 17.8073 8.01324 17.2853 8.30169 16.9318L8.36321 16.8634L13.2265 12.0001L8.36321 7.13686Z" fill="currentColor" />
+            </svg>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="idx-benefits">
+  <div class="wrapper">
+    <div class="idx-benefits__content">
+      <p class="idx-benefits__badge badge">Дополнительные услуги</p>
+      <h2 class="idx-benefits__title h2">Почему выбирают Агропорт</h2>
+      <p class="idx-benefits__text">Мы делаем цифровизацию сельского хозяйства простой и доступной</p>
+      <ul class="idx-benefits__list">
+        <li class="idx-benefits__item card card--outline">
+          <div class="card__icon"><img src="./img/target.svg" width="24" height="24" alt=""></div>
+          <p class="card__caption">Полное сопровождение</p>
+          <p class="card__desc">
+            От выбора решения до запуска в эксплуатацию. Наши эксперты помогают на каждом этапе
+            цифровой трансформации
+          </p>
+        </li>
+        <li class="idx-benefits__item card card--outline">
+          <div class="card__icon"><img src="./img/shield.svg" width="24" height="24" alt=""></div>
+          <p class="card__caption">Проверенные поставщики</p>
+          <p class="card__desc">
+            Все IT-компании проходят строгую верификацию. Мы проверяем опыт, отзывы клиентов и качество технической поддержки
+          </p>
+        </li>
+        <li class="idx-benefits__item">
+          <p class="card__caption">Получить бесплатную<br> консультацию</p>
+          <a href="#" class="btn">Проконсультироваться</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="idx-services">
+  <div class="wrapper">
+    <ul class="idx-services__list">
+      <li class="idx-services__item card">
+        <p class="idx-services__badge badge">Дополнительные услуги</p>
+        <h2 class="idx-services__title h2">Комплексная поддержка цифровой трансформации вашего бизнеса</h2>
+        <p class="idx-services__text">Все инструменты для успешного перехода к цифровому сельскому хозяйству в одном месте</p>
+      </li>
+      <li class="idx-services__item card">
+        <div class="card__icon"><img src="./img/pie.svg" width="24" height="24" alt=""></div>
+        <p class="card__caption">Консалтинг в сфере аналитики</p>
+        <p class="card__desc">
+          Аналитические исследования, прогнозное моделирование и внедрение BI-систем для принятия обоснованных решений
+        </p>
+        <a href="#" class="card__link">
+          <span>Оставить заявку</span>
+          <span class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.36321 7.13686C8.01174 6.78539 8.01174 6.21489 8.36321 5.86342C8.71469 5.51195 9.28518 5.51195 9.63665 5.86342L15.1367 11.3634C15.4662 11.693 15.4866 12.215 15.1982 12.5685L15.1367 12.6369L9.63665 18.1369L9.56829 18.1984C9.21479 18.4868 8.69277 18.4664 8.36321 18.1369C8.03366 17.8073 8.01324 17.2853 8.30169 16.9318L8.36321 16.8634L13.2265 12.0001L8.36321 7.13686Z" fill="currentColor" />
+            </svg>
+          </span>
+        </a>
+      </li>
+      <li class="idx-services__item card">
+        <div class="card__icon"><img src="./img/bars.svg" width="24" height="24" alt=""></div>
+        <p class="card__caption">Исследовательские услуги</p>
+        <p class="card__desc">
+          Маркетинговые исследования рынка АПК, технологический аудит, социологические опросы потребителей
+        </p>
+        <a href="#" class="card__link">
+          <span>Оставить заявку</span>
+          <span class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.36321 7.13686C8.01174 6.78539 8.01174 6.21489 8.36321 5.86342C8.71469 5.51195 9.28518 5.51195 9.63665 5.86342L15.1367 11.3634C15.4662 11.693 15.4866 12.215 15.1982 12.5685L15.1367 12.6369L9.63665 18.1369L9.56829 18.1984C9.21479 18.4868 8.69277 18.4664 8.36321 18.1369C8.03366 17.8073 8.01324 17.2853 8.30169 16.9318L8.36321 16.8634L13.2265 12.0001L8.36321 7.13686Z" fill="currentColor" />
+            </svg>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+@@include('./_footer.html')

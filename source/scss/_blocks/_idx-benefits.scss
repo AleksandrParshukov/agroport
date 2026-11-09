@@ -1,0 +1,136 @@
+.idx-benefits {
+  &__content {
+    color: #ffffff;
+    padding: 72px;
+    background: var(--color-primary) url('../img/idx-benefits-bg.png') no-repeat center / 100% 100%;
+    border-radius: 16px;
+  }
+
+  &__badge {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  &__title {
+    color: inherit;
+    margin-block: 44px 24px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
+  }
+
+  &__list {
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  &__item:last-child {
+    padding: 32px;
+    background: rgba(0, 0, 0, 0.32) url('../img/shield.png') no-repeat center right/ auto 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .card__caption {
+      color: #ffffff;
+    }
+
+    p,
+    a {
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .idx-benefits {
+    &__content {
+      padding: 52px 21px 76px 56px;
+    }
+
+    &__title {
+      margin-block: 36px 24px;
+    }
+
+    &__list {
+      margin-top: 102px;
+      gap: 20px;
+    }
+
+    &__item:last-child {
+      overflow: hidden;
+      background-position: center right -60px;
+      background-size: auto 230px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .idx-benefits {
+    &__content {
+      padding: 24px;
+      background: var(--color-primary) url('../img/idx-benefits-bg-sm.png') no-repeat center / 100% 100%;
+    }
+
+    &__title {
+      margin-block: 24px 16px;
+    }
+
+    &__list {
+      margin-top: 36px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    &__item {
+      &:last-child {
+        padding: 24px;
+        grid-column: span 2;
+        background-position: bottom -50px right 30%;
+        background-size: auto 220px;
+        gap: 48px;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .idx-benefits {
+    .wrapper {
+      background: var(--color-primary) url('../img/idx-benefits-bg-xs.png') no-repeat center / 100% 100%;
+    }
+
+    &__content {
+      padding-inline: 0;
+      background: none;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__list {
+      margin-top: 24px;
+      grid-template-columns: 100%;
+      gap: 8px;
+    }
+
+    &__item {
+      &:last-child {
+        height: 216px;
+        padding: 16px;
+        background-position: top right;
+        background-size: auto 170px;
+        grid-column: span 1;
+        gap: 16px;
+      }
+    }
+  }
+}

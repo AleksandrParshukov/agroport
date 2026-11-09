@@ -1,0 +1,199 @@
+.audit-form {
+  margin-bottom: 64px;
+  gap: 0;
+  position: relative;
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.16667;
+    color: var(--color-black);
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black-half);
+    margin-block: 8px 24px;
+  }
+
+  &__tabs {
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  &__caption {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
+    color: var(--color-black);
+    margin-bottom: 24px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(10, min-content);
+  }
+
+  &__list {
+    grid-row: span 10;
+    display: grid;
+    grid-template-rows: subgrid;
+  }
+
+  &__item {
+    padding: 16px;
+    display: flex;
+    gap: 8px;
+
+    &:nth-child(2n + 2) {
+      background-color: var(--color-substrate);
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    + label {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-black);
+      display: flex;
+      gap: 8px;
+      position: relative;
+      cursor: pointer;
+
+      > span {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        background: #ffffff no-repeat center / 14px 14px;
+        margin: 2px 0 0;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+      }
+    }
+
+    &:checked + label {
+      &::before {
+        background-color: var(--color-primary);
+        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2050%2050%22%3E%3Cpath%20d%3D%22M41.94%208.63c-.66.02-1.27.37-1.63.94L21.5%2038.34%209.31%2027.81c-.52-.54-1.31-.74-2.03-.52-.72.22-1.26.83-1.37%201.58-.12.75.18%201.5.79%201.95l13.94%2012.06c.44.37%201.02.54%201.57.47.57-.08%201.07-.41%201.38-.89l20.09-30.69c.43-.63.46-1.45.11-2.08-.37-.66-1.08-1.05-1.85-1.02z%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E');
+        border-color: var(--color-primary);
+      }
+    }
+
+    &.radio {
+      + label::before {
+        content: '';
+        border-radius: 100vw;
+        background: #ffffff;
+        transition: none;
+      }
+
+      &:checked + label::before {
+        background: #ffffff;
+        border: 5px solid var(--color-primary);
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: 1.33333;
+    color: var(--color-black-half);
+  }
+
+  &__prev,
+  &__next {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black-half);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    top: calc(100% + 24px);
+    z-index: 1;
+    transition: all 0.25s ease;
+
+    .icon {
+      color: rgba(0, 0, 0, 0.32);
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      background-color: #ffffff;
+      border-radius: 100vw;
+    }
+
+    &.disabled {
+      opacity: 0.75;
+      pointer-events: none;
+    }
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+}
+
+@media (max-width: $sm) {
+  .audit-form {
+    margin-bottom: 56px;
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__text {
+      margin-block: 8px 16px;
+    }
+
+    &__tabs {
+      padding: 16px;
+    }
+
+    &__caption {
+      margin-bottom: 16px;
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      padding: 8px;
+
+      &:nth-child(4n + 3),
+      &:nth-child(4n + 4) {
+        background-color: transparent;
+      }
+
+      &:nth-child(2n) {
+        background-color: var(--color-substrate);
+      }
+    }
+
+    &__prev,
+    &__next {
+      top: calc(100% + 16px);
+    }
+  }
+}

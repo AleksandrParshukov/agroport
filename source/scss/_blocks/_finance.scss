@@ -1,0 +1,166 @@
+.finance {
+  padding-block: 24px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  &__conds {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    dd {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-black);
+    }
+  }
+
+  &__features-bg {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-substrate);
+    border-radius: 8px;
+  }
+
+  &__desc-list {
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    li {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.33333;
+      color: var(--color-black-half);
+      padding: 4px 8px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+
+      &.blue {
+        color: #ffffff;
+        background-color: #5777ff;
+        border-color: #5777ff;
+      }
+    }
+  }
+
+  .market__item {
+    container-type: inline-size;
+    container-name: sidebar;
+  }
+
+  .market__features .finance__desc-list {
+    margin-top: 0;
+  }
+
+  .market__controls {
+    .btn {
+      flex: 1 0 30%;
+    }
+  }
+}
+
+.fin-credits {
+  &__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.fin-calc {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  &__cs-label {
+    margin-bottom: 8px;
+  }
+
+  &__form {
+    .form-group {
+      gap: 16px;
+    }
+  }
+
+  &__result {
+    .market__benefits li {
+      background-color: rgba(35, 150, 101, 0.1);
+    }
+  }
+}
+
+@container (width < 630px) {
+  .finance .market__controls {
+    .btn:first-child {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .fin-credits {
+    &__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .finance {
+    &__list {
+      grid-template-columns: 100%;
+    }
+  }
+
+  .fin-credits {
+    &__list {
+      grid-template-columns: 100%;
+    }
+  }
+  
+  .fin-calc {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+
+@media (max-width: $sm) {
+  .finance {
+    padding-block: 16px;
+
+    .wrapper {
+      background-color: var(--color-substrate);
+    }
+
+    &__list {
+      gap: 16px;
+    }
+
+    &__features-bg {
+      padding: 8px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .finance {
+    .market__controls {
+      .btn {
+        flex: 1 0 100%;
+      }
+    }
+  }
+}

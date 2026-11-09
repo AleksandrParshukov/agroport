@@ -1,0 +1,140 @@
+.footer {
+  margin-top: auto;
+
+  &__content {
+    padding: 72px;
+    background-color: #2e2e2e;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+  }
+
+  &__menus {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__block {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-white-half);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__caption {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 32px;
+
+    &--social {
+      flex-wrap: wrap;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.25;
+      color: var(--color-white-half);
+      width: max-content;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: 16px;
+
+    input {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--color-black-half);
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .btn {
+      padding-inline: 40px;
+    }
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--color-white-half);
+    width: 100%;
+  }
+}
+
+@media (max-width: $xl) {
+  .footer {
+    &__content {
+      padding: 56px;
+      gap: 48px;
+    }
+
+    &__menus {
+      gap: 48px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .footer {
+    &__content {
+      padding: 40px 24px;
+    }
+
+    &__menus {
+      gap: 32px;
+    }
+
+    &__menu {
+      flex-wrap: wrap;
+    }
+
+    &__copyright {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .footer {
+    .wrapper {
+      background-color: #2e2e2e;
+    }
+
+    &__content {
+      padding: 24px 16px;
+      gap: 52px 36px;
+    }
+
+    &__menus {
+      flex-direction: column;
+    }
+
+    &__form {
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.compare {
+  padding-block: 24px;
+
+  &__content {
+    padding: 24px;
+    background-color: var(--color-substrate);
+    border-radius: 16px;
+  }
+
+  &__container {
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+  }
+
+  &__info {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 16px;
+
+    .market__item {
+      flex: 1 0 40%;
+    }
+  }
+
+  &__title-block {
+    padding: 16px 12px;
+    background-color: var(--color-substrate);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &.closed svg {
+      transform: scaleY(-1);
+    }
+  }
+
+  &__caption {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--color-black);
+  }
+
+  &__row {
+    padding-left: 36px;
+    display: flex;
+  }
+
+  &__list {
+    flex: 1 0 40%;
+
+    > li {
+      padding: 16px 12px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(0 0 0 / 0.1);
+      }
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .compare {
+    padding-block: 16px;
+
+    &__content {
+      padding: 16px;
+    }
+
+    &__container {
+      padding: 16px;
+    }
+
+    &__info {
+      margin-bottom: 16px;
+      flex-direction: column;
+    }
+
+    &__table {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      > li {
+        padding: 16px;
+        background-color: var(--color-substrate);
+        border-radius: 16px;
+      }
+    }
+
+    &__title-block {
+      padding: 0;
+      background-color: transparent;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    &__row {
+      padding-left: 0;
+      flex-direction: column;
+    }
+
+    &__list {
+      padding: 16px;
+      margin-top: 12px;
+      background-color: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      > li {
+        padding: 0;
+
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &__list-caption {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.33333;
+      color: var(--color-black);
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .compare {
+    .wrapper {
+      background-color: var(--color-substrate);
+    }
+
+    &__content {
+      padding-inline: 0;
+      background-color: transparent;
+    }
+
+    &__info {
+      .market__item .btn{
+        order: 20;
+      }
+    }
+  }
+}

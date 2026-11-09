@@ -1,0 +1,555 @@
+@@include('./_header.html')
+
+<section class="section-top">
+  <div class="wrapper">
+    <div class="section-top__content">
+      <h1 class="h2">Цифровой аудит</h1>
+      <p class="section-top__desc">
+        Ответьте на несĸольĸо простых вопросов и получите персональные реĸомендации по автоматизации
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="audit">
+  <div class="wrapper">
+    <div class="audit__container">
+      <div class="audit__content">
+        <form action="" class="audit__form audit__block audit-form js_form_tabs">
+          <h2 class="audit-form__title">С чем сталкиваетесь</h2>
+          <p class="audit-form__text">Какие проблемы хотите решить?</p>
+
+          <div class="audit-form__tabs js_tabs_content">
+            <div id="js_form_tab_1" class="audit-form__tab">
+              <p class="audit-form__caption">Расскажите основную информацию о вашем хозяйстве?</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_1" id="audit_1">
+                    <label for="audit_1">
+                      <span>
+                        <span>Растениеводческое</span>
+                        <span class="audit-form__desc">Зерновые, масличные, технические культуры</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_2" id="audit_2">
+                    <label for="audit_2">
+                      <span>
+                        <span>Животноводческое</span>
+                        <span class="audit-form__desc">КРС, свиноводство, птицеводство</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_3" id="audit_3">
+                    <label for="audit_3">
+                      <span>
+                        <span>Смешанное</span>
+                        <span class="audit-form__desc">Растениеводство + животноводство</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_4" id="audit_4">
+                    <label for="audit_4">
+                      <span>
+                        <span>Малое хозяйство</span>
+                        <span class="audit-form__desc">До 100 га / до 100 голов</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_5" id="audit_5">
+                    <label for="audit_5">
+                      <span>
+                        <span>Среднее хозяйство</span>
+                        <span class="audit-form__desc">100–1 000 га / 100–1 000 голов</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_6" id="audit_6">
+                    <label for="audit_6">
+                      <span>
+                        <span>Крупное хозяйство/агрохолдинг</span>
+                        <span class="audit-form__desc">Свыше 1 000 га / свыше 1 000 голов</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="js_form_tab_2" class="audit-form__tab">
+              <p class="audit-form__caption">Какие программы и системы уже используете в хозяйстве? (Выберите 3-4 варианта)</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_7" id="audit_7">
+                    <label for="audit_7">
+                      <span>
+                        <span>Электронные таблицы (Excel, Google Sheets)</span>
+                        <span class="audit-form__desc">Для учёта урожая, расходов, планирования</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_8" id="audit_8">
+                    <label for="audit_8">
+                      <span>
+                        <span>Мессенджеры и почта</span>
+                        <span class="audit-form__desc">Для координации работы персонала и общения с контрагентами</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_9" id="audit_9">
+                    <label for="audit_9">
+                      <span>
+                        <span>Бухгалтерские программы (1С и аналоги)</span>
+                        <span class="audit-form__desc">Для финансового учёта и отчётности</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_10" id="audit_10">
+                    <label for="audit_10">
+                      <span>
+                        <span>Системы GPS‑навигации и мониторинга техники</span>
+                        <span class="audit-form__desc">Контроль маршрутов, расхода ГСМ, работы агрегатов</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_11" id="audit_11">
+                    <label for="audit_11">
+                      <span>
+                        <span>Программы для точного земледелия</span>
+                        <span class="audit-form__desc">Карты полей, дифференцированное внесение, анализ вегетации</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_12" id="audit_12">
+                    <label for="audit_12">
+                      <span>
+                        <span>Специализированное ПО для животноводства</span>
+                        <span class="audit-form__desc">Учёт поголовья, рациона, ветеринарных мероприятий</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_13" id="audit_13">
+                    <label for="audit_13">
+                      <span>
+                        <span>ERP‑системы для АПК</span>
+                        <span class="audit-form__desc">Комплексная автоматизация: учёт, логистика, планирование, аналитика</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_14" id="audit_14">
+                    <label for="audit_14">
+                      <span>
+                        <span>Датчики и IoT‑решения</span>
+                        <span class="audit-form__desc">Мониторинг почвы, микроклимата, состояния животных</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_15" id="audit_15">
+                    <label for="audit_15">
+                      <span>
+                        <span>Дроны и сервисы обработки аэрофотосъёмки</span>
+                        <span class="audit-form__desc">Контроль посевов, инвентаризация, выявление проблем</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_16" id="audit_16">
+                    <label for="audit_16">
+                      <span>
+                        <span>Облачные платформы и агрегаторы</span>
+                        <span class="audit-form__desc">Продажа продукции, закупка ресурсов, обмен данными</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="js_form_tab_3" class="audit-form__tab">
+              <p class="audit-form__caption">С какими проблемами вы сталкиваетесь в работе хозяйства? (Выберите 3-4 варианта)</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_17" id="audit_17">
+                    <label for="audit_17">
+                      <span>
+                        <span>Высокие затраты на ГСМ, удобрения и корма </span>
+                        <span class="audit-form__desc">Рост цен на ресурсы существенно увеличивает себестоимость продукции</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_18" id="audit_18">
+                    <label for="audit_18">
+                      <span>
+                        <span>Нехватка квалифицированных кадров</span>
+                        <span class="audit-form__desc">Сложно найти специалистов, умеющих работать с современной техникой и цифровыми системами</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_19" id="audit_19">
+                    <label for="audit_19">
+                      <span>
+                        <span>Сложности с получением субсидий и грантов </span>
+                        <span class="audit-form__desc">Бюрократические барьеры, жёсткие требования к документации</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_20" id="audit_20">
+                    <label for="audit_20">
+                      <span>
+                        <span>Проблемы со сбытом продукции</span>
+                        <span class="audit-form__desc">жёсткие требования к сертификации, конкуренция, логистические сложности</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_21" id="audit_21">
+                    <label for="audit_21">
+                      <span>
+                        <span>Климатические риски</span>
+                        <span class="audit-form__desc">Засухи, переувлажнение, перепады температур, влияющие на урожайность</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_22" id="audit_22">
+                    <label for="audit_22">
+                      <span>
+                        <span>Высокая стоимость внедрения цифровых технологий</span>
+                        <span class="audit-form__desc">Дороговизна оборудования, ПО и обучения персонала</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_23" id="audit_23">
+                    <label for="audit_23">
+                      <span>
+                        <span>Недостаточная инфраструктура</span>
+                        <span class="audit-form__desc">Слабый интернет в сельской местности, проблемы с электроснабжением</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_24" id="audit_24">
+                    <label for="audit_24">
+                      <span>
+                        <span>Зависимость от импортных технологий и ПО </span>
+                        <span class="audit-form__desc">Риски из‑за санкций, колебаний валютных курсов, прекращения поддержки</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_25" id="audit_25">
+                    <label for="audit_25">
+                      <span>
+                        <span>Сложность учёта и анализа данных</span>
+                        <span class="audit-form__desc">Разрозненные источники информации, отсутствие единой системы</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_26" id="audit_26">
+                    <label for="audit_26">
+                      <span>
+                        <span>Риски кибербезопасности</span>
+                        <span class="audit-form__desc">Угроза взлома систем управления, потери данных, сбоев в работе оборудования</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_27" id="audit_27">
+                    <label for="audit_27">
+                      <span>
+                        <span>Проблемы с техобслуживанием техники и оборудования</span>
+                        <span class="audit-form__desc">Долгие сроки ремонта, дефицит запчастей</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_28" id="audit_28">
+                    <label for="audit_28">
+                      <span>
+                        <span>Необходимость соответствия экологическим и сертификационным стандартам</span>
+                        <span class="audit-form__desc">Затраты на аудит, документацию, изменения процессов</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="js_form_tab_4" class="audit-form__tab">
+              <p class="audit-form__caption">Какие задачи вы планируете автоматизировать в своём хозяйстве? (Выберите 3-4 варианта)</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_29" id="audit_29">
+                    <label for="audit_29">
+                      <span>
+                        <span>Учёт и планирование полевых работ</span>
+                        <span class="audit-form__desc">Составление графиков посевов, обработок, уборки; контроль выполнения операций</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_30" id="audit_30">
+                    <label for="audit_30">
+                      <span>
+                        <span>Мониторинг состояния посевов</span>
+                        <span class="audit-form__desc">Анализ вегетации, выявление болезней и вредителей, оценка влажности почвы</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_31" id="audit_31">
+                    <label for="audit_31">
+                      <span>
+                        <span>Управление техникой и ГСМ</span>
+                        <span class="audit-form__desc">Отслеживание маршрутов, расхода топлива, простоев, технического состояния машин</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_32" id="audit_32">
+                    <label for="audit_32">
+                      <span>
+                        <span>Учёт поголовья и ветеринарных мероприятий</span>
+                        <span class="audit-form__desc">Контроль здоровья животных, вакцинации, репродукции, роста</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_33" id="audit_33">
+                    <label for="audit_33">
+                      <span>
+                        <span>Расчёт и оптимизация рациона животных</span>
+                        <span class="audit-form__desc">Балансировка кормов, учёт затрат, контроль качества питания</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_34" id="audit_34">
+                    <label for="audit_34">
+                      <span>
+                        <span>Финансовый учёт и отчётность</span>
+                        <span class="audit-form__desc">Калькуляция себестоимости, планирование бюджета, подготовка документов для субсидий</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_35" id="audit_35">
+                    <label for="audit_35">
+                      <span>
+                        <span>Логистика и сбыт продукции</span>
+                        <span class="audit-form__desc">Планирование отгрузок, поиск покупателей, оформление сопроводительных документов</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_36" id="audit_36">
+                    <label for="audit_36">
+                      <span>
+                        <span>Управление складскими запасами </span>
+                        <span class="audit-form__desc">Учёт семян, удобрений, кормов, запчастей; контроль сроков годности и остатков</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_37" id="audit_37">
+                    <label for="audit_37">
+                      <span>
+                        <span>Анализ эффективности производства</span>
+                        <span class="audit-form__desc">Сбор и визуализация KPI, прогнозирование урожайности, расчёт ROI</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_38" id="audit_38">
+                    <label for="audit_38">
+                      <span>
+                        <span>Интеграция данных из разных источников</span>
+                        <span class="audit-form__desc">Объединение информации с датчиков, дронов, учётных систем в единой платформе</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_39" id="audit_39">
+                    <label for="audit_39">
+                      <span>
+                        <span>Автоматизация документооборота</span>
+                        <span class="audit-form__desc">Электронные ветеринарные сертификаты, фитосанитарные документы, отчёты в госорганы</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_40" id="audit_40">
+                    <label for="audit_40">
+                      <span>
+                        <span>Прогнозирование погодных рисков</span>
+                        <span class="audit-form__desc">Интеграция метеоданных для корректировки агротехнологий</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="js_form_tab_5" class="audit-form__tab">
+              <p class="audit-form__caption">Каков ваш годовой бюджет для внедрения цифровых решений? (Выберите один вариант)</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_41">
+                    <label for="audit_41">
+                      <span>
+                        <span>Бюджет: до 500 тыс. руб</span>
+                        <span class="audit-form__desc">Подходит для старта с базовыми инструментами (мобильные приложения, облачные сервисы, простые датчики).</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_42">
+                    <label for="audit_42">
+                      <span>
+                        <span>Бюджет: 500 тыс. – 1 млн руб</span>
+                        <span class="audit-form__desc">Позволяет внедрить модульные решения (GPS‑мониторинг, ПО для учёта, начальную автоматизацию процессов).</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_43">
+                    <label for="audit_43">
+                      <span>
+                        <span>Бюджет: 1–5 млн руб.</span>
+                        <span class="audit-form__desc">Достаточно для комплексной автоматизации (датчики IoT, дроны, интеграция учётных систем, обучение персонала).</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_44">
+                    <label for="audit_44">
+                      <span>
+                        <span>Бюджет: свыше 5 млн руб.</span>
+                        <span class="audit-form__desc">Возможность развернуть полномасштабную цифровую платформу (ERP, Big Data, автоматизированные фермы, сквозная аналитика).</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_45">
+                    <label for="audit_45">
+                      <span>
+                        <span>Бюджет: пока не определён, но есть интерес к пилотным проектам</span>
+                        <span class="audit-form__desc">Подойдут пробные решения с минимальным риском и быстрой окупаемостью.</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_46">
+                    <label for="audit_46">
+                      <span>
+                        <span>Бюджет: планируем привлекать господдержку/кредиты/инвесторов</span>
+                        <span class="audit-form__desc"> Акцент на проекты с чёткими KPI и возможностью демонстрации эффективности для внешних источников.</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="audit-form__prev disabled js_form_prev">
+            <span class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.3868 17.1131C14.7383 17.4646 14.7383 18.0351 14.3868 18.3866C14.0353 18.7381 13.4648 18.7381 13.1133 18.3866L7.61335 12.8866C7.2838 12.557 7.26337 12.035 7.55183 11.6815L7.61335 11.6131L13.1133 6.11314L13.1817 6.05162C13.5352 5.76317 14.0572 5.78359 14.3868 6.11314C14.7163 6.4427 14.7368 6.96472 14.4483 7.31822L14.3868 7.38658L9.52351 12.2499L14.3868 17.1131Z" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="from-sm">Предыдущий</span>
+          </button>
+
+          <button type="button" class="audit-form__next js_form_next">
+            <span class="from-sm">Следующий</span>
+            <span class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.61321 6.88686C9.26174 6.53539 9.26174 5.96489 9.61321 5.61342C9.96469 5.26195 10.5352 5.26195 10.8867 5.61342L16.3867 11.1134C16.7162 11.443 16.7366 11.965 16.4482 12.3185L16.3867 12.3869L10.8867 17.8869L10.8183 17.9484C10.4648 18.2368 9.94277 18.2164 9.61321 17.8869C9.28366 17.5573 9.26324 17.0353 9.55169 16.6818L9.61321 16.6134L14.4765 11.7501L9.61321 6.88686Z" fill="currentColor" />
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+
+      <div class="audit__block progress">
+        <p class="audit__caption">Прогресс</p>
+
+        <div class="audit-progress">
+          <p class="audit-progress__text">Вопрос 1 из 5</p>
+          <p class="audit-progress__completion"><span class="js_progress">0%</span> завершено</p>
+          <div class="audit-progress__track">
+            <div class="audit-progress__thumb js_progress_bar" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="audit__block from-sm">
+        <p class="audit__caption">Вопросы</p>
+
+        <ul class="audit__questions-list js_question_list">
+          <li class="current" data-tab="1">О вашем хозяйстве</li>
+          <li data-tab="2">Что уже используете</li>
+          <li data-tab="3">С чем сталкиваетесь</li>
+          <li data-tab="4">Что хотите получить</li>
+          <li data-tab="5">Возможности</li>
+        </ul>
+      </div>
+
+      <div class="audit__block">
+        <p class="audit__caption">Возникли сложности с заполнением?</p>
+
+        <ul class="audit__controls">
+          <li>
+            <a href="tel:+78005553535" class="btn btn-outline">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9004 17.8799C19.9004 18.9955 18.9955 19.9004 17.8799 19.9004C13.6448 19.9004 10.1727 18.6552 7.75879 16.2412C5.34484 13.8273 4.09963 10.3552 4.09961 6.12012C4.09961 5.0045 5.0045 4.09961 6.12012 4.09961H9.54004C10.2737 4.09961 10.8384 4.6499 10.9404 5.31348L10.9541 5.44727L10.9795 5.78613C11.0528 6.59595 11.2244 7.51117 11.4678 8.10254C11.7133 8.6999 11.5835 9.55411 10.8613 9.9668L9.8623 10.5371C9.99746 11.3514 10.4545 12.1817 11.1553 12.8574C11.8521 13.5293 12.7378 13.995 13.665 14.1348L14.0156 13.3184L14.0889 13.1709C14.4582 12.5173 15.2274 12.3369 15.8213 12.5098L15.9453 12.5518L16.2178 12.6484C16.8911 12.8627 17.803 13.0023 18.5527 13.0459C19.2744 13.0878 19.9004 13.6776 19.9004 14.46V17.8799ZM5.90039 6.12012C5.90041 10.0049 7.03524 12.9727 9.03125 14.9688C11.0273 16.9648 13.9951 18.0996 17.8799 18.0996C18.0014 18.0996 18.0996 18.0014 18.0996 17.8799V14.8164C17.2926 14.7463 16.3287 14.5848 15.5449 14.3184L15.0674 15.4346C14.9256 15.7654 14.6002 15.9804 14.2402 15.9805C12.5714 15.9805 11.0252 15.2332 9.90527 14.1533C8.7896 13.0775 8.02052 11.5951 8.02051 10.04C8.02051 9.71708 8.19324 9.41903 8.47363 9.25879L9.71387 8.54883C9.42706 7.74717 9.25631 6.73753 9.18359 5.90039H6.12012C5.99861 5.90039 5.90039 5.99861 5.90039 6.12012Z" fill="currentColor" />
+              </svg>
+              <span>8 800 555-35-35</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="btn btn-outline">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.7816 3.52529C21.0491 3.57488 21.2982 3.69578 21.5013 3.8749C21.7043 4.05406 21.8538 4.2848 21.9339 4.5419C22.0141 4.79918 22.0214 5.07366 21.9554 5.33487L18.4037 19.3809C18.343 19.6235 18.2205 19.8465 18.0482 20.0293L17.9105 20.1582C17.7656 20.2772 17.5987 20.3682 17.4183 20.4258C17.2677 20.4745 17.11 20.4996 16.9515 20.5L16.8216 20.4941C16.5197 20.4677 16.2323 20.3501 15.9984 20.1562L12.7816 18.124L10.6273 20.2539L10.556 20.3145C10.4806 20.3697 10.393 20.4075 10.3002 20.4258L10.2064 20.4375C10.144 20.4405 10.0815 20.434 10.0209 20.4189L9.93201 20.3896C9.84468 20.3539 9.76654 20.3 9.70349 20.2314L9.6449 20.1582C9.57476 20.0545 9.5376 19.9323 9.53748 19.8076V15.5791C9.53744 15.4962 9.55425 15.4135 9.58631 15.3369C9.61828 15.2606 9.66502 15.1912 9.724 15.1328L12.5629 11.6308L7.91346 14.6308C7.82517 14.689 7.72322 14.7247 7.61756 14.7343L7.53846 14.7363C7.48561 14.7346 7.43302 14.7273 7.38221 14.7129L7.30799 14.6865L2.90566 12.6406C2.66588 12.539 2.45746 12.3777 2.30117 12.1728L2.23769 12.082C2.07656 11.8342 1.99361 11.5445 2.00038 11.2499C2.00725 10.9552 2.10407 10.669 2.27675 10.4287C2.44943 10.1883 2.69092 10.0048 2.97011 9.9013L19.9818 3.59365C20.2368 3.49922 20.5139 3.47575 20.7816 3.52529ZM4.32753 11.3164L7.46717 12.7753L11.5873 10.1181L11.7289 10.0351C12.4513 9.6568 13.3489 9.81144 13.9027 10.4287C14.4564 11.0459 14.5129 11.9545 14.059 12.6318L13.9613 12.7636L11.3373 16V17.0195L11.516 16.8437L11.6312 16.7392C12.2261 16.2444 13.0796 16.1829 13.7435 16.6025L16.766 18.5127L20.0619 5.48331L4.32753 11.3164Z" fill="currentColor" />
+              </svg>
+              <span>Написать в чат</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('./_footer.html')

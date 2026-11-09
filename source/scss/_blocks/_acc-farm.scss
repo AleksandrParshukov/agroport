@@ -1,0 +1,93 @@
+.acc-farm {
+  &__badge {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33333;
+    color: #ffffff;
+    padding: 4px 8px;
+    background-color: #2fca35;
+    border-radius: 4px;
+    position: absolute;
+    top: 26px;
+    right: 24px;
+  }
+
+  &__block {
+    > ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+
+      .account__feature {
+        margin-bottom: 8px;
+      }
+
+      > li > div p + p {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.acc-farm-sum {
+  &__priority {
+    background: var(--color-primary) url('../img/account-priority-bg.png') no-repeat center/100% 100%;
+  }
+}
+
+@media (max-width: $md) {
+  .acc-farm {
+    &__block {
+      > ul {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .acc-farm {
+    &__badge {
+      top: 16px;
+      right: 16px;
+    }
+
+    &__block {
+      > ul {
+        gap: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .acc-farm {
+    &__block {
+      > ul {
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+
+    &__view-all {
+      width: 100%;
+    }
+  }
+
+  .acc-farm-sum {
+    &__priority {
+      .account__btns {
+        flex-direction: row;
+
+        li {
+          flex: 1 0 40%;
+        }
+
+        li:first-child {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}

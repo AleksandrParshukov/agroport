@@ -1,0 +1,286 @@
+</main>
+
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__content">
+      <div class="footer__block">
+        <p class="footer__caption">Продукты</p>
+        <ul class="footer__menu">
+          <li><a href="#">Маркетплейс</a></li>
+          <li><a href="#">Цифровой аудит</a></li>
+          <li><a href="#">Финансирование</a></li>
+          <li><a href="#">Обучение</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <p class="footer__caption">Сервисы</p>
+        <ul class="footer__menu">
+          <li><a href="#">Аналитический консалтинг</a></li>
+          <li><a href="#">HR консалтинг</a></li>
+          <li><a href="#">Исследования</a></li>
+          <li><a href="#">Кейсы внедрения</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <p class="footer__caption">Поддержка</p>
+        <ul class="footer__menu">
+          <li><a href="#">Центр поддержки</a></li>
+          <li><a href="#">Документация</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <p class="footer__caption">Контакты</p>
+        <ul class="footer__menu">
+          <li>
+            <a href="tel:+78001234567">
+              <img src="./img/phone.svg" width="24" height="24" alt="">
+              <span>8 (800) 123-45-67</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@agroport.ru">
+              <img src="./img/mail.svg" width="24" height="24" alt="">
+              <span>info@agroport.ru</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://yandex.ru/maps/213/moscow/house/profsoyuznaya_ulitsa_123/Z04YcwZkS0EPQFtvfXpzdX5mZQ==/?indoorLevel=1&ll=37.514248%2C55.624251&z=17">
+              <img src="./img/map-pointer.svg" width="24" height="24" alt="">
+              <span>Москва, ул. Примерная, 123</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <p class="footer__caption">Будьте в курсе новинок</p>
+        <p>Получайте еженедельную рассылку о новых решениях и акциях</p>
+        <form class="footer__form">
+          <input type="email" name="subscribe_email" id="subscribe_email" placeholder="Ваш email">
+          <button type="submit" class="btn">Подписаться</button>
+        </form>
+      </div>
+
+      <p class="footer__copyright">© 2024 Агропорт. Все права защищены. Платформа для цифровизации сельского хозяйства.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="loginModal" class="modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <div class="modal__top">
+          <p class="modal__title">Добро пожаловать в Агропорт</p>
+          <p>Ваш путь к цифровизации начинается здесь</p>
+          <button type="button" class="modal__close" data-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.41357 6.41358C6.76504 6.06211 7.33544 6.06211 7.68691 6.41358L12 10.7267L16.3131 6.41358C16.6645 6.06211 17.2349 6.06211 17.5864 6.41358C17.9379 6.76505 17.9379 7.33545 17.5864 7.68692L13.2733 12L17.5864 16.3131C17.9379 16.6645 17.9379 17.2349 17.5864 17.5864C17.2349 17.9379 16.6645 17.9379 16.3131 17.5864L12 13.2733L7.68691 17.5864C7.33544 17.9379 6.76504 17.9379 6.41357 17.5864C6.0621 17.2349 6.0621 16.6645 6.41357 16.3131L10.7266 12L6.41357 7.68692C6.0621 7.33545 6.0621 6.76505 6.41357 6.41358Z" fill="white" />
+            </svg>
+          </button>
+        </div>
+
+        <form class="modal__form">
+          <div>
+            <p class="modal__form-title">Вход в систему</p>
+            <p class="modal__form-desc">Войдите в свой аккаунт для доступа ко всем функциям платформы</p>
+          </div>
+
+          <div class="form-group">
+            <label for="login_email">E-mail</label>
+            <input type="email" name="login_email" id="login_email" placeholder="your@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="login_password">Пароль</label>
+            <input type="password" name="login_password" id="login_password" placeholder="Введите пароль">
+          </div>
+
+          <div class="modal__form-row">
+            <div class="modal__checkbox">
+              <input type="checkbox" id="login_remember" name="login_remember">
+              <label for="login_remember">Запомнить меня</label>
+            </div>
+
+            <a href="#" class="modal__link" data-dismiss="modal" data-toggle="modal" data-target="#forgotModal">Забыли пароль?</a>
+          </div>
+
+          <button type="submit" class="btn">
+            <span>Войти в систему</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.125 4.09961C18.2789 4.09961 20.0254 5.84609 20.0254 8V16C20.0254 18.1539 18.2789 19.9004 16.125 19.9004H11.125L11.0332 19.8955C10.5793 19.8495 10.2246 19.4661 10.2246 19C10.2246 18.5339 10.5793 18.1505 11.0332 18.1045L11.125 18.0996H16.125C17.2848 18.0996 18.2246 17.1598 18.2246 16V8C18.2246 6.8402 17.2848 5.90039 16.125 5.90039H11.125L11.0332 5.89551C10.5793 5.84953 10.2246 5.46607 10.2246 5C10.2246 4.53393 10.5793 4.15047 11.0332 4.10449L11.125 4.09961H16.125ZM10.4121 8.27637C10.7416 7.94683 11.2637 7.92645 11.6172 8.21484L11.6855 8.27637L14.7725 11.3633L14.79 11.3828C14.7979 11.3912 14.8059 11.3995 14.8135 11.4082L14.834 11.4316C14.8465 11.447 14.8558 11.4645 14.8672 11.4805C14.8812 11.5001 14.8958 11.5192 14.9082 11.54C14.9246 11.5676 14.938 11.5962 14.9512 11.625C14.9616 11.6476 14.9729 11.6698 14.9814 11.6934C14.9837 11.6995 14.9852 11.7058 14.9873 11.7119C15.018 11.8025 15.0361 11.8991 15.0361 12C15.0361 12.1006 15.0178 12.1968 14.9873 12.2871C14.9852 12.2933 14.9837 12.2996 14.9814 12.3057C14.9729 12.3293 14.9616 12.3514 14.9512 12.374C14.938 12.4028 14.9246 12.4314 14.9082 12.459C14.8958 12.4798 14.8812 12.4989 14.8672 12.5186C14.8557 12.5347 14.8466 12.5529 14.834 12.5684L14.8135 12.5908C14.8059 12.5995 14.7979 12.6078 14.79 12.6162L14.7725 12.6367L11.6855 15.7236C11.3341 16.0749 10.7635 16.075 10.4121 15.7236C10.061 15.3723 10.0612 14.8026 10.4121 14.4512L11.9619 12.9004H4.875C4.37794 12.9004 3.97461 12.4971 3.97461 12C3.97461 11.5029 4.37794 11.0996 4.875 11.0996H11.9619L10.4121 9.5498L10.3506 9.48145C10.0622 9.12801 10.0827 8.60592 10.4121 8.27637Z" fill="currentColor" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="modal__bottom">
+          <p>Еще нет аккаунта?</p>
+          <a href="#" class="modal__link" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Зарегистрируйтесь</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="registerModal" class="modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <div class="modal__top">
+          <p class="modal__title">Добро пожаловать в Агропорт</p>
+          <p>Ваш путь к цифровизации начинается здесь</p>
+          <button type="button" class="modal__close" data-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.41357 6.41358C6.76504 6.06211 7.33544 6.06211 7.68691 6.41358L12 10.7267L16.3131 6.41358C16.6645 6.06211 17.2349 6.06211 17.5864 6.41358C17.9379 6.76505 17.9379 7.33545 17.5864 7.68692L13.2733 12L17.5864 16.3131C17.9379 16.6645 17.9379 17.2349 17.5864 17.5864C17.2349 17.9379 16.6645 17.9379 16.3131 17.5864L12 13.2733L7.68691 17.5864C7.33544 17.9379 6.76504 17.9379 6.41357 17.5864C6.0621 17.2349 6.0621 16.6645 6.41357 16.3131L10.7266 12L6.41357 7.68692C6.0621 7.33545 6.0621 6.76505 6.41357 6.41358Z" fill="white" />
+            </svg>
+          </button>
+        </div>
+
+        <form class="modal__form register-form">
+          <div>
+            <p class="modal__form-title">Создание аккаунта</p>
+            <p class="modal__form-desc">Присоединяйтесь к тысячам сельхозпроизводителей, которые уже используют Агропорт</p>
+          </div>
+
+          <div class="modal__form-row">
+            <div class="form-group">
+              <label for="register_email">E-mail <b class="text-danger">*</b></label>
+              <input type="email" name="register_email" id="register_email" placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="register_phone">Телефон <b class="text-danger">*</b></label>
+              <input type="tel" name="register_phone" id="register_phone" placeholder="+7 (999) 123-45-67" class="js_phone_input">
+            </div>
+          </div>
+
+          <div class="modal__form-row">
+            <div class="form-group">
+              <label for="register_password">Пароль <b class="text-danger">*</b></label>
+              <input type="password" name="register_password" id="register_password" placeholder="Введите пароль">
+            </div>
+
+            <div class="form-group">
+              <label for="register_password2">Подтвердите пароль <b class="text-danger">*</b></label>
+              <input type="password" name="register_password2" id="register_password2" placeholder="Введите пароль">
+            </div>
+          </div>
+
+          <div class="modal__info-block">
+            <p class="modal__form-title">Создание аккаунта</p>
+
+            <div class="modal__form-row">
+              <div class="form-group">
+                <label for="register_inn">ИНН организации <b class="text-danger">*</b></label>
+                <input type="text" name="register_inn" id="register_inn" placeholder="1234567890">
+              </div>
+
+              <a href="#" class="btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0449 2C16.0404 2 20.0898 6.04954 20.0898 11.0449C20.0898 13.2168 19.3238 15.2093 18.0479 16.7686L21.7354 20.4561L21.7969 20.5244C22.0866 20.8796 22.0664 21.4042 21.7354 21.7354C21.4042 22.0665 20.8797 22.0866 20.5244 21.7969L20.4551 21.7354L16.7676 18.0479C15.2084 19.3234 13.2165 20.0898 11.0449 20.0898C6.04953 20.0898 2 16.0403 2 11.0449C2.00003 6.0496 6.04955 2.00009 11.0449 2ZM11.0449 3.80859C7.04865 3.80869 3.80863 7.04868 3.80859 11.0449C3.80859 15.0412 7.04863 18.2812 11.0449 18.2812C15.0413 18.2812 18.2812 15.0412 18.2812 11.0449C18.2812 7.04862 15.0413 3.80859 11.0449 3.80859Z" fill="currentColor" />
+                </svg>
+                <span>Найти</span>
+              </a>
+            </div>
+
+            <div class="modal__form-row">
+              <div class="form-group">
+                <label for="register_company">Название хозяйства <b class="text-danger">*</b></label>
+                <input type="text" name="register_company" id="register_company" placeholder="Название хозяйства">
+              </div>
+
+              <div class="form-group">
+                <label for="register_fullname">ФИО <b class="text-danger">*</b></label>
+                <input type="text" name="register_fullname" id="register_fullname" placeholder="ФИО">
+              </div>
+            </div>
+
+            <div class="custom-select">
+              <p class="register-form__cs-label">Регион <b class="text-danger">*</b></p>
+              <div class="custom-select__selected" tabindex="0">
+                <span>Выберите регион</span>
+
+                <svg class="custom-select__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.8631 9.86321C17.2146 9.51174 17.7851 9.51174 18.1366 9.86321C18.4881 10.2147 18.4881 10.7852 18.1366 11.1367L12.6366 16.6367C12.307 16.9662 11.785 16.9866 11.4315 16.6982L11.3631 16.6367L5.86314 11.1367L5.80162 11.0683C5.51317 10.7148 5.53359 10.1928 5.86314 9.86321C6.1927 9.53366 6.71472 9.51324 7.06822 9.80169L7.13658 9.86321L11.9999 14.7265L16.8631 9.86321Z" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="custom-select__options">
+                <div class="custom-select__option" data-value="Москва" tabindex="0">Москва</div>
+                <div class="custom-select__option" data-value="Не Москва" tabindex="0">Не Москва</div>
+              </div>
+              <input type="hidden" id="credit_type" name="credit_type">
+            </div>
+          </div>
+
+          <div class="modal__form-row register-form__checkboxes">
+            <div class="modal__checkbox">
+              <input type="checkbox" id="register_confidence" name="register_confidence">
+              <label for="register_confidence"><span>Я соглашаюсь с <a href="#">пользовательским соглашением</a> и <a href="#">политикой конфиденциальности</a></span></label>
+            </div>
+
+            <div class="modal__checkbox">
+              <input type="checkbox" id="register_newsletter" name="register_newsletter">
+              <label for="register_newsletter"><span>Согласен получать персональные рекомендации решений и информацию о субсидиях</span></label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">
+            <span>Создать аккаунт</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.125 4.09961C18.2789 4.09961 20.0254 5.84609 20.0254 8V16C20.0254 18.1539 18.2789 19.9004 16.125 19.9004H11.125L11.0332 19.8955C10.5793 19.8495 10.2246 19.4661 10.2246 19C10.2246 18.5339 10.5793 18.1505 11.0332 18.1045L11.125 18.0996H16.125C17.2848 18.0996 18.2246 17.1598 18.2246 16V8C18.2246 6.8402 17.2848 5.90039 16.125 5.90039H11.125L11.0332 5.89551C10.5793 5.84953 10.2246 5.46607 10.2246 5C10.2246 4.53393 10.5793 4.15047 11.0332 4.10449L11.125 4.09961H16.125ZM10.4121 8.27637C10.7416 7.94683 11.2637 7.92645 11.6172 8.21484L11.6855 8.27637L14.7725 11.3633L14.79 11.3828C14.7979 11.3912 14.8059 11.3995 14.8135 11.4082L14.834 11.4316C14.8465 11.447 14.8558 11.4645 14.8672 11.4805C14.8812 11.5001 14.8958 11.5192 14.9082 11.54C14.9246 11.5676 14.938 11.5962 14.9512 11.625C14.9616 11.6476 14.9729 11.6698 14.9814 11.6934C14.9837 11.6995 14.9852 11.7058 14.9873 11.7119C15.018 11.8025 15.0361 11.8991 15.0361 12C15.0361 12.1006 15.0178 12.1968 14.9873 12.2871C14.9852 12.2933 14.9837 12.2996 14.9814 12.3057C14.9729 12.3293 14.9616 12.3514 14.9512 12.374C14.938 12.4028 14.9246 12.4314 14.9082 12.459C14.8958 12.4798 14.8812 12.4989 14.8672 12.5186C14.8557 12.5347 14.8466 12.5529 14.834 12.5684L14.8135 12.5908C14.8059 12.5995 14.7979 12.6078 14.79 12.6162L14.7725 12.6367L11.6855 15.7236C11.3341 16.0749 10.7635 16.075 10.4121 15.7236C10.061 15.3723 10.0612 14.8026 10.4121 14.4512L11.9619 12.9004H4.875C4.37794 12.9004 3.97461 12.4971 3.97461 12C3.97461 11.5029 4.37794 11.0996 4.875 11.0996H11.9619L10.4121 9.5498L10.3506 9.48145C10.0622 9.12801 10.0827 8.60592 10.4121 8.27637Z" fill="currentColor" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="modal__bottom">
+          <p>Уже есть аккаунт?</p>
+          <a href="#" class="modal__link" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Войти</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="forgotModal" class="modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <div class="modal__top">
+          <p class="modal__title">Добро пожаловать в Агропорт</p>
+          <p>Ваш путь к цифровизации начинается здесь</p>
+          <button type="button" class="modal__close" data-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.41357 6.41358C6.76504 6.06211 7.33544 6.06211 7.68691 6.41358L12 10.7267L16.3131 6.41358C16.6645 6.06211 17.2349 6.06211 17.5864 6.41358C17.9379 6.76505 17.9379 7.33545 17.5864 7.68692L13.2733 12L17.5864 16.3131C17.9379 16.6645 17.9379 17.2349 17.5864 17.5864C17.2349 17.9379 16.6645 17.9379 16.3131 17.5864L12 13.2733L7.68691 17.5864C7.33544 17.9379 6.76504 17.9379 6.41357 17.5864C6.0621 17.2349 6.0621 16.6645 6.41357 16.3131L10.7266 12L6.41357 7.68692C6.0621 7.33545 6.0621 6.76505 6.41357 6.41358Z" fill="white" />
+            </svg>
+          </button>
+        </div>
+
+        <form class="modal__form">
+          <div>
+            <p class="modal__form-title">Забыли пароль?</p>
+            <p class="modal__form-desc">Некий текст о том, что на почту придёт подтвержение или whatever</p>
+          </div>
+
+          <div class="form-group">
+            <label for="login_email">E-mail</label>
+            <input type="email" name="login_email" id="login_email" placeholder="your@email.com">
+          </div>
+
+          <button type="submit" class="btn">Сбросить пароль</button>
+        </form>
+
+        <div class="modal__bottom">
+          <p>Еще нет аккаунта?</p>
+          <a href="#" class="modal__link" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Зарегистрируйтесь</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

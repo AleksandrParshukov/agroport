@@ -1,0 +1,81 @@
+.idx-about {
+  padding-block: 24px;
+
+  &__list {
+    padding: 8px 24px;
+    background-color: var(--color-substrate);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
+    color: var(--color-black-half);
+    grid-column: span 2;
+
+    > * {
+      max-width: 592px;
+    }
+  }
+
+  .card__desc {
+    font-weight: 600;
+  }
+
+  &__badge {
+    color: var(--color-black);
+    padding-block: 3px;
+  }
+}
+
+@media (max-width: $lg) {
+  .idx-about {
+    &__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .idx-about {
+    .wrapper {
+      background-color: var(--color-substrate);
+    }
+
+    &__list {
+      padding-inline: 0;
+      grid-template-columns: 100%;
+      gap: 16px;
+    }
+
+    .title {
+      font-size: 16px;
+      grid-column: span 1;
+      gap: 24px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .idx-about {
+    padding-block: 16px;
+
+    &__list {
+      gap: 8px;
+    }
+
+    .title {
+      font-size: 16px;
+      grid-column: span 1;
+      gap: 16px;
+
+      .h2 {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

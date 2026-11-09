@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Агропорт</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <a href="/" class="header__logo"><img src="./img/logo.svg" width="169" height="40" alt="Dream Fair"></a>
+        <button type="button" class="header__menu-toggle js_header_menu_toggle to-sm">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.25 13.7563C17.4006 13.7563 18.333 14.6897 18.333 15.8403C18.3327 16.9907 17.4004 17.9233 16.25 17.9233H3.75C2.59957 17.9233 1.66726 16.9907 1.66699 15.8403C1.66699 14.6897 2.59941 13.7563 3.75 13.7563H16.25ZM16.25 7.9165C17.4006 7.9165 18.333 8.84896 18.333 9.99951C18.333 11.1501 17.4006 12.0825 16.25 12.0825H3.75C2.59941 12.0825 1.66699 11.1501 1.66699 9.99951C1.66704 8.84896 2.59943 7.9165 3.75 7.9165H16.25ZM16.25 2.07666C17.4006 2.07666 18.333 3.00911 18.333 4.15967C18.333 5.31026 17.4006 6.24268 16.25 6.24268H3.75C2.59941 6.24268 1.66699 5.31026 1.66699 4.15967C1.66704 3.00911 2.59943 2.07666 3.75 2.07666H16.25Z" fill="currentColor" />
+          </svg>
+        </button>
+        <nav class="main-nav from-sm">
+          <a href="./marketplace.html" class="main-nav__link">Маркетплейс</a>
+          <a href="./audit.html" class="main-nav__link">Цифровой аудит</a>
+          <a href="./account_farm.html" class="btn" data-toggle="modal" data-target="#loginModal">Войти в личный кабинет</a>
+        </nav>
+        <nav class="mob-nav to-sm">
+          <div class="mob-nav__content">
+            <a href="/" class="header__logo"><img src="./img/logo.svg" width="169" height="40" alt="Dream Fair"></a>
+            <div class="mob-nav__login">
+              <a href="#" class="btn" data-toggle="modal" data-target="#loginModal">
+                <span>Войти</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.125 4.09961C18.2789 4.09961 20.0254 5.84609 20.0254 8V16C20.0254 18.1539 18.2789 19.9004 16.125 19.9004H11.125L11.0332 19.8955C10.5793 19.8495 10.2246 19.4661 10.2246 19C10.2246 18.5339 10.5793 18.1505 11.0332 18.1045L11.125 18.0996H16.125C17.2848 18.0996 18.2246 17.1598 18.2246 16V8C18.2246 6.8402 17.2848 5.90039 16.125 5.90039H11.125L11.0332 5.89551C10.5793 5.84953 10.2246 5.46607 10.2246 5C10.2246 4.53393 10.5793 4.15047 11.0332 4.10449L11.125 4.09961H16.125ZM10.4121 8.27637C10.7416 7.94683 11.2637 7.92645 11.6172 8.21484L11.6855 8.27637L14.7725 11.3633L14.79 11.3828C14.7979 11.3912 14.8059 11.3995 14.8135 11.4082L14.834 11.4316C14.8465 11.447 14.8558 11.4645 14.8672 11.4805C14.8812 11.5001 14.8958 11.5192 14.9082 11.54C14.9246 11.5676 14.938 11.5962 14.9512 11.625C14.9616 11.6476 14.9729 11.6698 14.9814 11.6934C14.9837 11.6995 14.9852 11.7058 14.9873 11.7119C15.018 11.8025 15.0361 11.8991 15.0361 12C15.0361 12.1006 15.0178 12.1968 14.9873 12.2871C14.9852 12.2933 14.9837 12.2996 14.9814 12.3057C14.9729 12.3293 14.9616 12.3514 14.9512 12.374C14.938 12.4028 14.9246 12.4314 14.9082 12.459C14.8958 12.4798 14.8812 12.4989 14.8672 12.5186C14.8557 12.5347 14.8466 12.5529 14.834 12.5684L14.8135 12.5908C14.8059 12.5995 14.7979 12.6078 14.79 12.6162L14.7725 12.6367L11.6855 15.7236C11.3341 16.0749 10.7635 16.075 10.4121 15.7236C10.061 15.3723 10.0612 14.8026 10.4121 14.4512L11.9619 12.9004H4.875C4.37794 12.9004 3.97461 12.4971 3.97461 12C3.97461 11.5029 4.37794 11.0996 4.875 11.0996H11.9619L10.4121 9.5498L10.3506 9.48145C10.0622 9.12801 10.0827 8.60592 10.4121 8.27637Z" fill="currentColor" />
+                </svg>
+              </a>
+              <a href="#" class="btn btn-outline" data-toggle="modal" data-target="#registerModal">
+                <span>Регистрация</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1162 6.12695C12.5753 6.14221 13.0269 6.24779 13.4453 6.4375C13.8639 6.62734 14.2416 6.89782 14.5557 7.2334C14.8697 7.56893 15.1146 7.96342 15.2764 8.39355C15.438 8.82368 15.5132 9.28196 15.498 9.74121C15.4828 10.2003 15.3772 10.6519 15.1875 11.0703C14.9977 11.4889 14.7272 11.8666 14.3916 12.1807C14.0561 12.4947 13.6616 12.7396 13.2314 12.9014C12.8013 13.063 12.343 13.1382 11.8838 13.123C11.4247 13.1078 10.9731 13.0022 10.5547 12.8125C10.1361 12.6227 9.75842 12.3522 9.44434 12.0166C9.13035 11.6811 8.88535 11.2866 8.72363 10.8564C8.56197 10.4263 8.48676 9.96804 8.50195 9.50879C8.51721 9.04966 8.62279 8.59807 8.8125 8.17969C9.00234 7.7611 9.27283 7.38342 9.6084 7.06934C9.94393 6.75535 10.3384 6.51035 10.7686 6.34863C11.1987 6.18697 11.657 6.11176 12.1162 6.12695Z" fill="currentColor" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C11.2233 22 10.468 21.9078 9.74219 21.7402C9.62069 21.735 9.50154 21.7071 9.3916 21.6543C5.13391 20.5068 2 16.6203 2 12C2 6.47715 6.47715 2 12 2ZM12 3.7998C7.47126 3.7998 3.7998 7.47126 3.7998 12C3.7998 14.2328 4.69296 16.2566 6.14062 17.7354C6.65659 16.9198 7.33977 16.2173 8.15039 15.6768L8.36621 15.5381C9.45748 14.8674 10.7153 14.5108 12 14.5107C13.3702 14.5108 14.71 14.917 15.8496 15.6768L16.0605 15.8223C16.7792 16.3408 17.3889 16.9906 17.8594 17.7344C19.3068 16.2556 20.2002 14.2326 20.2002 12C20.2002 7.47126 16.5287 3.7998 12 3.7998Z" fill="currentColor" />
+                </svg>
+              </a>
+            </div>
+            
+            <ul class="mob-nav__nav">
+              <li><a href="./marketplace.html">Маркетплейс</a></li>
+              <li><a href="./audit.html">Цифровой аудит</a></li>
+              <li><a href="./marketplace.html">Финансирование</a></li>
+              <li><a href="./marketplace.html">Обучение</a></li>
+            </ul>
+
+            <ul class="mob-nav__social">
+              <li>
+                <a href="tel:+78001234567">
+                  <img src="./img/phone.svg" width="24" height="24" alt="">
+                  <span>8 (800) 123-45-67</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@agroport.ru">
+                  <img src="./img/mail.svg" width="24" height="24" alt="">
+                  <span>info@agroport.ru</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.ru/maps/213/moscow/house/profsoyuznaya_ulitsa_123/Z04YcwZkS0EPQFtvfXpzdX5mZQ==/?indoorLevel=1&ll=37.514248%2C55.624251&z=17">
+                  <img src="./img/map-pointer.svg" width="24" height="24" alt="">
+                  <span>Москва, ул. Примерная, 123</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+
+<section class="section-top">
+  <div class="wrapper">
+    <div class="section-top__content">
+      <h1 class="h2">Цифровой аудит</h1>
+      <p class="section-top__desc">
+        Ответьте на несĸольĸо простых вопросов и получите персональные реĸомендации по автоматизации
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="audit">
+  <div class="wrapper">
+    <div class="audit__container">
+      <div class="audit__content">
+        <form action="" class="audit__form audit__block audit-form js_form_tabs">
+          <h2 class="audit-form__title">С чем сталкиваетесь</h2>
+          <p class="audit-form__text">Какие проблемы хотите решить?</p>
+
+          <div class="audit-form__tabs js_tabs_content">
+            <div id="js_form_tab_1" class="audit-form__tab">
+              <p class="audit-form__caption">Расскажите основную информацию о вашем хозяйстве?</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_1" id="audit_1">
+                    <label for="audit_1">
+                      <span>
+                        <span>Растениеводческое</span>
+                        <span class="audit-form__desc">Зерновые, масличные, технические культуры</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_2" id="audit_2">
+                    <label for="audit_2">
+                      <span>
+                        <span>Животноводческое</span>
+                        <span class="audit-form__desc">КРС, свиноводство, птицеводство</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_3" id="audit_3">
+                    <label for="audit_3">
+                      <span>
+                        <span>Смешанное</span>
+                        <span class="audit-form__desc">Растениеводство + животноводство</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_4" id="audit_4">
+                    <label for="audit_4">
+                      <span>
+                        <span>Малое хозяйство</span>
+                        <span class="audit-form__desc">До 100 га / до 100 голов</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_5" id="audit_5">
+                    <label for="audit_5">
+                      <span>
+                        <span>Среднее хозяйство</span>
+                        <span class="audit-form__desc">100–1 000 га / 100–1 000 голов</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_6" id="audit_6">
+                    <label for="audit_6">
+                      <span>
+                        <span>Крупное хозяйство/агрохолдинг</span>
+                        <span class="audit-form__desc">Свыше 1 000 га / свыше 1 000 голов</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="js_form_tab_2" class="audit-form__tab">
+              <p class="audit-form__caption">Какие программы и системы уже используете в хозяйстве? (Выберите 3-4 варианта)</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_7" id="audit_7">
+                    <label for="audit_7">
+                      <span>
+                        <span>Электронные таблицы (Excel, Google Sheets)</span>
+                        <span class="audit-form__desc">Для учёта урожая, расходов, планирования</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_8" id="audit_8">
+                    <label for="audit_8">
+                      <span>
+                        <span>Мессенджеры и почта</span>
+                        <span class="audit-form__desc">Для координации работы персонала и общения с контрагентами</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_9" id="audit_9">
+                    <label for="audit_9">
+                      <span>
+                        <span>Бухгалтерские программы (1С и аналоги)</span>
+                        <span class="audit-form__desc">Для финансового учёта и отчётности</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_10" id="audit_10">
+                    <label for="audit_10">
+                      <span>
+                        <span>Системы GPS‑навигации и мониторинга техники</span>
+                        <span class="audit-form__desc">Контроль маршрутов, расхода ГСМ, работы агрегатов</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_11" id="audit_11">
+                    <label for="audit_11">
+                      <span>
+                        <span>Программы для точного земледелия</span>
+                        <span class="audit-form__desc">Карты полей, дифференцированное внесение, анализ вегетации</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_12" id="audit_12">
+                    <label for="audit_12">
+                      <span>
+                        <span>Специализированное ПО для животноводства</span>
+                        <span class="audit-form__desc">Учёт поголовья, рациона, ветеринарных мероприятий</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_13" id="audit_13">
+                    <label for="audit_13">
+                      <span>
+                        <span>ERP‑системы для АПК</span>
+                        <span class="audit-form__desc">Комплексная автоматизация: учёт, логистика, планирование, аналитика</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_14" id="audit_14">
+                    <label for="audit_14">
+                      <span>
+                        <span>Датчики и IoT‑решения</span>
+                        <span class="audit-form__desc">Мониторинг почвы, микроклимата, состояния животных</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_15" id="audit_15">
+                    <label for="audit_15">
+                      <span>
+                        <span>Дроны и сервисы обработки аэрофотосъёмки</span>
+                        <span class="audit-form__desc">Контроль посевов, инвентаризация, выявление проблем</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_16" id="audit_16">
+                    <label for="audit_16">
+                      <span>
+                        <span>Облачные платформы и агрегаторы</span>
+                        <span class="audit-form__desc">Продажа продукции, закупка ресурсов, обмен данными</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="js_form_tab_3" class="audit-form__tab">
+              <p class="audit-form__caption">С какими проблемами вы сталкиваетесь в работе хозяйства? (Выберите 3-4 варианта)</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_17" id="audit_17">
+                    <label for="audit_17">
+                      <span>
+                        <span>Высокие затраты на ГСМ, удобрения и корма </span>
+                        <span class="audit-form__desc">Рост цен на ресурсы существенно увеличивает себестоимость продукции</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_18" id="audit_18">
+                    <label for="audit_18">
+                      <span>
+                        <span>Нехватка квалифицированных кадров</span>
+                        <span class="audit-form__desc">Сложно найти специалистов, умеющих работать с современной техникой и цифровыми системами</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_19" id="audit_19">
+                    <label for="audit_19">
+                      <span>
+                        <span>Сложности с получением субсидий и грантов </span>
+                        <span class="audit-form__desc">Бюрократические барьеры, жёсткие требования к документации</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_20" id="audit_20">
+                    <label for="audit_20">
+                      <span>
+                        <span>Проблемы со сбытом продукции</span>
+                        <span class="audit-form__desc">жёсткие требования к сертификации, конкуренция, логистические сложности</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_21" id="audit_21">
+                    <label for="audit_21">
+                      <span>
+                        <span>Климатические риски</span>
+                        <span class="audit-form__desc">Засухи, переувлажнение, перепады температур, влияющие на урожайность</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_22" id="audit_22">
+                    <label for="audit_22">
+                      <span>
+                        <span>Высокая стоимость внедрения цифровых технологий</span>
+                        <span class="audit-form__desc">Дороговизна оборудования, ПО и обучения персонала</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_23" id="audit_23">
+                    <label for="audit_23">
+                      <span>
+                        <span>Недостаточная инфраструктура</span>
+                        <span class="audit-form__desc">Слабый интернет в сельской местности, проблемы с электроснабжением</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_24" id="audit_24">
+                    <label for="audit_24">
+                      <span>
+                        <span>Зависимость от импортных технологий и ПО </span>
+                        <span class="audit-form__desc">Риски из‑за санкций, колебаний валютных курсов, прекращения поддержки</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_25" id="audit_25">
+                    <label for="audit_25">
+                      <span>
+                        <span>Сложность учёта и анализа данных</span>
+                        <span class="audit-form__desc">Разрозненные источники информации, отсутствие единой системы</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_26" id="audit_26">
+                    <label for="audit_26">
+                      <span>
+                        <span>Риски кибербезопасности</span>
+                        <span class="audit-form__desc">Угроза взлома систем управления, потери данных, сбоев в работе оборудования</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_27" id="audit_27">
+                    <label for="audit_27">
+                      <span>
+                        <span>Проблемы с техобслуживанием техники и оборудования</span>
+                        <span class="audit-form__desc">Долгие сроки ремонта, дефицит запчастей</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_28" id="audit_28">
+                    <label for="audit_28">
+                      <span>
+                        <span>Необходимость соответствия экологическим и сертификационным стандартам</span>
+                        <span class="audit-form__desc">Затраты на аудит, документацию, изменения процессов</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="js_form_tab_4" class="audit-form__tab">
+              <p class="audit-form__caption">Какие задачи вы планируете автоматизировать в своём хозяйстве? (Выберите 3-4 варианта)</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_29" id="audit_29">
+                    <label for="audit_29">
+                      <span>
+                        <span>Учёт и планирование полевых работ</span>
+                        <span class="audit-form__desc">Составление графиков посевов, обработок, уборки; контроль выполнения операций</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_30" id="audit_30">
+                    <label for="audit_30">
+                      <span>
+                        <span>Мониторинг состояния посевов</span>
+                        <span class="audit-form__desc">Анализ вегетации, выявление болезней и вредителей, оценка влажности почвы</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_31" id="audit_31">
+                    <label for="audit_31">
+                      <span>
+                        <span>Управление техникой и ГСМ</span>
+                        <span class="audit-form__desc">Отслеживание маршрутов, расхода топлива, простоев, технического состояния машин</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_32" id="audit_32">
+                    <label for="audit_32">
+                      <span>
+                        <span>Учёт поголовья и ветеринарных мероприятий</span>
+                        <span class="audit-form__desc">Контроль здоровья животных, вакцинации, репродукции, роста</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_33" id="audit_33">
+                    <label for="audit_33">
+                      <span>
+                        <span>Расчёт и оптимизация рациона животных</span>
+                        <span class="audit-form__desc">Балансировка кормов, учёт затрат, контроль качества питания</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_34" id="audit_34">
+                    <label for="audit_34">
+                      <span>
+                        <span>Финансовый учёт и отчётность</span>
+                        <span class="audit-form__desc">Калькуляция себестоимости, планирование бюджета, подготовка документов для субсидий</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_35" id="audit_35">
+                    <label for="audit_35">
+                      <span>
+                        <span>Логистика и сбыт продукции</span>
+                        <span class="audit-form__desc">Планирование отгрузок, поиск покупателей, оформление сопроводительных документов</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_36" id="audit_36">
+                    <label for="audit_36">
+                      <span>
+                        <span>Управление складскими запасами </span>
+                        <span class="audit-form__desc">Учёт семян, удобрений, кормов, запчастей; контроль сроков годности и остатков</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_37" id="audit_37">
+                    <label for="audit_37">
+                      <span>
+                        <span>Анализ эффективности производства</span>
+                        <span class="audit-form__desc">Сбор и визуализация KPI, прогнозирование урожайности, расчёт ROI</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_38" id="audit_38">
+                    <label for="audit_38">
+                      <span>
+                        <span>Интеграция данных из разных источников</span>
+                        <span class="audit-form__desc">Объединение информации с датчиков, дронов, учётных систем в единой платформе</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_39" id="audit_39">
+                    <label for="audit_39">
+                      <span>
+                        <span>Автоматизация документооборота</span>
+                        <span class="audit-form__desc">Электронные ветеринарные сертификаты, фитосанитарные документы, отчёты в госорганы</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox" type="checkbox" name="audit_40" id="audit_40">
+                    <label for="audit_40">
+                      <span>
+                        <span>Прогнозирование погодных рисков</span>
+                        <span class="audit-form__desc">Интеграция метеоданных для корректировки агротехнологий</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="js_form_tab_5" class="audit-form__tab">
+              <p class="audit-form__caption">Каков ваш годовой бюджет для внедрения цифровых решений? (Выберите один вариант)</p>
+              <div class="audit-form__row">
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_41">
+                    <label for="audit_41">
+                      <span>
+                        <span>Бюджет: до 500 тыс. руб</span>
+                        <span class="audit-form__desc">Подходит для старта с базовыми инструментами (мобильные приложения, облачные сервисы, простые датчики).</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_42">
+                    <label for="audit_42">
+                      <span>
+                        <span>Бюджет: 500 тыс. – 1 млн руб</span>
+                        <span class="audit-form__desc">Позволяет внедрить модульные решения (GPS‑мониторинг, ПО для учёта, начальную автоматизацию процессов).</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_43">
+                    <label for="audit_43">
+                      <span>
+                        <span>Бюджет: 1–5 млн руб.</span>
+                        <span class="audit-form__desc">Достаточно для комплексной автоматизации (датчики IoT, дроны, интеграция учётных систем, обучение персонала).</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+                <ul class="audit-form__list">
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_44">
+                    <label for="audit_44">
+                      <span>
+                        <span>Бюджет: свыше 5 млн руб.</span>
+                        <span class="audit-form__desc">Возможность развернуть полномасштабную цифровую платформу (ERP, Big Data, автоматизированные фермы, сквозная аналитика).</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_45">
+                    <label for="audit_45">
+                      <span>
+                        <span>Бюджет: пока не определён, но есть интерес к пилотным проектам</span>
+                        <span class="audit-form__desc">Подойдут пробные решения с минимальным риском и быстрой окупаемостью.</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="audit-form__item">
+                    <input class="audit-form__checkbox radio" type="radio" name="audit_41" id="audit_46">
+                    <label for="audit_46">
+                      <span>
+                        <span>Бюджет: планируем привлекать господдержку/кредиты/инвесторов</span>
+                        <span class="audit-form__desc"> Акцент на проекты с чёткими KPI и возможностью демонстрации эффективности для внешних источников.</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="audit-form__prev disabled js_form_prev">
+            <span class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.3868 17.1131C14.7383 17.4646 14.7383 18.0351 14.3868 18.3866C14.0353 18.7381 13.4648 18.7381 13.1133 18.3866L7.61335 12.8866C7.2838 12.557 7.26337 12.035 7.55183 11.6815L7.61335 11.6131L13.1133 6.11314L13.1817 6.05162C13.5352 5.76317 14.0572 5.78359 14.3868 6.11314C14.7163 6.4427 14.7368 6.96472 14.4483 7.31822L14.3868 7.38658L9.52351 12.2499L14.3868 17.1131Z" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="from-sm">Предыдущий</span>
+          </button>
+
+          <button type="button" class="audit-form__next js_form_next">
+            <span class="from-sm">Следующий</span>
+            <span class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.61321 6.88686C9.26174 6.53539 9.26174 5.96489 9.61321 5.61342C9.96469 5.26195 10.5352 5.26195 10.8867 5.61342L16.3867 11.1134C16.7162 11.443 16.7366 11.965 16.4482 12.3185L16.3867 12.3869L10.8867 17.8869L10.8183 17.9484C10.4648 18.2368 9.94277 18.2164 9.61321 17.8869C9.28366 17.5573 9.26324 17.0353 9.55169 16.6818L9.61321 16.6134L14.4765 11.7501L9.61321 6.88686Z" fill="currentColor" />
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+
+      <div class="audit__block progress">
+        <p class="audit__caption">Прогресс</p>
+
+        <div class="audit-progress">
+          <p class="audit-progress__text">Вопрос 1 из 5</p>
+          <p class="audit-progress__completion"><span class="js_progress">0%</span> завершено</p>
+          <div class="audit-progress__track">
+            <div class="audit-progress__thumb js_progress_bar" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="audit__block from-sm">
+        <p class="audit__caption">Вопросы</p>
+
+        <ul class="audit__questions-list js_question_list">
+          <li class="current" data-tab="1">О вашем хозяйстве</li>
+          <li data-tab="2">Что уже используете</li>
+          <li data-tab="3">С чем сталкиваетесь</li>
+          <li data-tab="4">Что хотите получить</li>
+          <li data-tab="5">Возможности</li>
+        </ul>
+      </div>
+
+      <div class="audit__block">
+        <p class="audit__caption">Возникли сложности с заполнением?</p>
+
+        <ul class="audit__controls">
+          <li>
+            <a href="tel:+78005553535" class="btn btn-outline">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9004 17.8799C19.9004 18.9955 18.9955 19.9004 17.8799 19.9004C13.6448 19.9004 10.1727 18.6552 7.75879 16.2412C5.34484 13.8273 4.09963 10.3552 4.09961 6.12012C4.09961 5.0045 5.0045 4.09961 6.12012 4.09961H9.54004C10.2737 4.09961 10.8384 4.6499 10.9404 5.31348L10.9541 5.44727L10.9795 5.78613C11.0528 6.59595 11.2244 7.51117 11.4678 8.10254C11.7133 8.6999 11.5835 9.55411 10.8613 9.9668L9.8623 10.5371C9.99746 11.3514 10.4545 12.1817 11.1553 12.8574C11.8521 13.5293 12.7378 13.995 13.665 14.1348L14.0156 13.3184L14.0889 13.1709C14.4582 12.5173 15.2274 12.3369 15.8213 12.5098L15.9453 12.5518L16.2178 12.6484C16.8911 12.8627 17.803 13.0023 18.5527 13.0459C19.2744 13.0878 19.9004 13.6776 19.9004 14.46V17.8799ZM5.90039 6.12012C5.90041 10.0049 7.03524 12.9727 9.03125 14.9688C11.0273 16.9648 13.9951 18.0996 17.8799 18.0996C18.0014 18.0996 18.0996 18.0014 18.0996 17.8799V14.8164C17.2926 14.7463 16.3287 14.5848 15.5449 14.3184L15.0674 15.4346C14.9256 15.7654 14.6002 15.9804 14.2402 15.9805C12.5714 15.9805 11.0252 15.2332 9.90527 14.1533C8.7896 13.0775 8.02052 11.5951 8.02051 10.04C8.02051 9.71708 8.19324 9.41903 8.47363 9.25879L9.71387 8.54883C9.42706 7.74717 9.25631 6.73753 9.18359 5.90039H6.12012C5.99861 5.90039 5.90039 5.99861 5.90039 6.12012Z" fill="currentColor" />
+              </svg>
+              <span>8 800 555-35-35</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="btn btn-outline">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.7816 3.52529C21.0491 3.57488 21.2982 3.69578 21.5013 3.8749C21.7043 4.05406 21.8538 4.2848 21.9339 4.5419C22.0141 4.79918 22.0214 5.07366 21.9554 5.33487L18.4037 19.3809C18.343 19.6235 18.2205 19.8465 18.0482 20.0293L17.9105 20.1582C17.7656 20.2772 17.5987 20.3682 17.4183 20.4258C17.2677 20.4745 17.11 20.4996 16.9515 20.5L16.8216 20.4941C16.5197 20.4677 16.2323 20.3501 15.9984 20.1562L12.7816 18.124L10.6273 20.2539L10.556 20.3145C10.4806 20.3697 10.393 20.4075 10.3002 20.4258L10.2064 20.4375C10.144 20.4405 10.0815 20.434 10.0209 20.4189L9.93201 20.3896C9.84468 20.3539 9.76654 20.3 9.70349 20.2314L9.6449 20.1582C9.57476 20.0545 9.5376 19.9323 9.53748 19.8076V15.5791C9.53744 15.4962 9.55425 15.4135 9.58631 15.3369C9.61828 15.2606 9.66502 15.1912 9.724 15.1328L12.5629 11.6308L7.91346 14.6308C7.82517 14.689 7.72322 14.7247 7.61756 14.7343L7.53846 14.7363C7.48561 14.7346 7.43302 14.7273 7.38221 14.7129L7.30799 14.6865L2.90566 12.6406C2.66588 12.539 2.45746 12.3777 2.30117 12.1728L2.23769 12.082C2.07656 11.8342 1.99361 11.5445 2.00038 11.2499C2.00725 10.9552 2.10407 10.669 2.27675 10.4287C2.44943 10.1883 2.69092 10.0048 2.97011 9.9013L19.9818 3.59365C20.2368 3.49922 20.5139 3.47575 20.7816 3.52529ZM4.32753 11.3164L7.46717 12.7753L11.5873 10.1181L11.7289 10.0351C12.4513 9.6568 13.3489 9.81144 13.9027 10.4287C14.4564 11.0459 14.5129 11.9545 14.059 12.6318L13.9613 12.7636L11.3373 16V17.0195L11.516 16.8437L11.6312 16.7392C12.2261 16.2444 13.0796 16.1829 13.7435 16.6025L16.766 18.5127L20.0619 5.48331L4.32753 11.3164Z" fill="currentColor" />
+              </svg>
+              <span>Написать в чат</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__content">
+      <div class="footer__menus">
+        <div class="footer__block">
+          <p class="footer__caption">Продукты</p>
+          <ul class="footer__menu">
+            <li><a href="#">Маркетплейс</a></li>
+            <li><a href="#">Цифровой аудит</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <p class="footer__caption">Сервисы</p>
+          <ul class="footer__menu">
+            <li><a href="#">Аналитический консалтинг</a></li>
+            <li><a href="#">HR консалтинг</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <p class="footer__caption">Контакты</p>
+          <ul class="footer__menu footer__menu--social">
+            <li>
+              <a href="tel:+78001234567">
+                <img src="./img/phone.svg" width="24" height="24" alt="">
+                <span>8 (800) 123-45-67</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@agroport.ru">
+                <img src="./img/mail.svg" width="24" height="24" alt="">
+                <span>info@agroport.ru</span>
+              </a>
+            </li>
+            <li class="footer__address">
+              <a href="https://yandex.ru/maps/213/moscow/house/profsoyuznaya_ulitsa_123/Z04YcwZkS0EPQFtvfXpzdX5mZQ==/?indoorLevel=1&ll=37.514248%2C55.624251&z=17">
+                <img src="./img/map-pointer.svg" width="24" height="24" alt="">
+                <span>Москва, ул. Примерная, 123</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__copyright">© 2024 Агропорт. Все права защищены. Платформа для цифровизации сельского хозяйства.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="loginModal" class="modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <div class="modal__top">
+          <p class="modal__title">Добро пожаловать в Агропорт</p>
+          <p>Ваш путь к цифровизации начинается здесь</p>
+          <button type="button" class="modal__close" data-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.41357 6.41358C6.76504 6.06211 7.33544 6.06211 7.68691 6.41358L12 10.7267L16.3131 6.41358C16.6645 6.06211 17.2349 6.06211 17.5864 6.41358C17.9379 6.76505 17.9379 7.33545 17.5864 7.68692L13.2733 12L17.5864 16.3131C17.9379 16.6645 17.9379 17.2349 17.5864 17.5864C17.2349 17.9379 16.6645 17.9379 16.3131 17.5864L12 13.2733L7.68691 17.5864C7.33544 17.9379 6.76504 17.9379 6.41357 17.5864C6.0621 17.2349 6.0621 16.6645 6.41357 16.3131L10.7266 12L6.41357 7.68692C6.0621 7.33545 6.0621 6.76505 6.41357 6.41358Z" fill="white" />
+            </svg>
+          </button>
+        </div>
+
+        <form class="modal__form">
+          <div>
+            <p class="modal__form-title">Вход в систему</p>
+            <p class="modal__form-desc">Войдите в свой аккаунт для доступа ко всем функциям платформы</p>
+          </div>
+
+          <div class="form-group">
+            <label for="login_email">E-mail</label>
+            <input type="email" name="login_email" id="login_email" placeholder="your@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="login_password">Пароль</label>
+            <input type="password" name="login_password" id="login_password" placeholder="Введите пароль">
+          </div>
+
+          <div class="modal__form-row">
+            <div class="modal__checkbox">
+              <input type="checkbox" id="login_remember" name="login_remember">
+              <label for="login_remember">Запомнить меня</label>
+            </div>
+
+            <a href="#" class="modal__link" data-dismiss="modal" data-toggle="modal" data-target="#forgotModal">Забыли пароль?</a>
+          </div>
+
+          <button type="submit" class="btn">
+            <span>Войти в систему</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.125 4.09961C18.2789 4.09961 20.0254 5.84609 20.0254 8V16C20.0254 18.1539 18.2789 19.9004 16.125 19.9004H11.125L11.0332 19.8955C10.5793 19.8495 10.2246 19.4661 10.2246 19C10.2246 18.5339 10.5793 18.1505 11.0332 18.1045L11.125 18.0996H16.125C17.2848 18.0996 18.2246 17.1598 18.2246 16V8C18.2246 6.8402 17.2848 5.90039 16.125 5.90039H11.125L11.0332 5.89551C10.5793 5.84953 10.2246 5.46607 10.2246 5C10.2246 4.53393 10.5793 4.15047 11.0332 4.10449L11.125 4.09961H16.125ZM10.4121 8.27637C10.7416 7.94683 11.2637 7.92645 11.6172 8.21484L11.6855 8.27637L14.7725 11.3633L14.79 11.3828C14.7979 11.3912 14.8059 11.3995 14.8135 11.4082L14.834 11.4316C14.8465 11.447 14.8558 11.4645 14.8672 11.4805C14.8812 11.5001 14.8958 11.5192 14.9082 11.54C14.9246 11.5676 14.938 11.5962 14.9512 11.625C14.9616 11.6476 14.9729 11.6698 14.9814 11.6934C14.9837 11.6995 14.9852 11.7058 14.9873 11.7119C15.018 11.8025 15.0361 11.8991 15.0361 12C15.0361 12.1006 15.0178 12.1968 14.9873 12.2871C14.9852 12.2933 14.9837 12.2996 14.9814 12.3057C14.9729 12.3293 14.9616 12.3514 14.9512 12.374C14.938 12.4028 14.9246 12.4314 14.9082 12.459C14.8958 12.4798 14.8812 12.4989 14.8672 12.5186C14.8557 12.5347 14.8466 12.5529 14.834 12.5684L14.8135 12.5908C14.8059 12.5995 14.7979 12.6078 14.79 12.6162L14.7725 12.6367L11.6855 15.7236C11.3341 16.0749 10.7635 16.075 10.4121 15.7236C10.061 15.3723 10.0612 14.8026 10.4121 14.4512L11.9619 12.9004H4.875C4.37794 12.9004 3.97461 12.4971 3.97461 12C3.97461 11.5029 4.37794 11.0996 4.875 11.0996H11.9619L10.4121 9.5498L10.3506 9.48145C10.0622 9.12801 10.0827 8.60592 10.4121 8.27637Z" fill="currentColor" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="modal__bottom">
+          <p>Еще нет аккаунта?</p>
+          <a href="#" class="modal__link" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Зарегистрируйтесь</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="registerModal" class="modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <div class="modal__top">
+          <p class="modal__title">Добро пожаловать в Агропорт</p>
+          <p>Ваш путь к цифровизации начинается здесь</p>
+          <button type="button" class="modal__close" data-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.41357 6.41358C6.76504 6.06211 7.33544 6.06211 7.68691 6.41358L12 10.7267L16.3131 6.41358C16.6645 6.06211 17.2349 6.06211 17.5864 6.41358C17.9379 6.76505 17.9379 7.33545 17.5864 7.68692L13.2733 12L17.5864 16.3131C17.9379 16.6645 17.9379 17.2349 17.5864 17.5864C17.2349 17.9379 16.6645 17.9379 16.3131 17.5864L12 13.2733L7.68691 17.5864C7.33544 17.9379 6.76504 17.9379 6.41357 17.5864C6.0621 17.2349 6.0621 16.6645 6.41357 16.3131L10.7266 12L6.41357 7.68692C6.0621 7.33545 6.0621 6.76505 6.41357 6.41358Z" fill="white" />
+            </svg>
+          </button>
+        </div>
+
+        <form class="modal__form register-form">
+          <div>
+            <p class="modal__form-title">Создание аккаунта</p>
+            <p class="modal__form-desc">Присоединяйтесь к тысячам сельхозпроизводителей, которые уже используют Агропорт</p>
+          </div>
+
+          <div class="modal__info-block">
+            <p class="modal__form-title">Я представляю</p>
+
+            <div class="modal__form-row">
+              <input type="radio" id="acc_type_1" class="btn modal__radio" name="acc_type" checked>
+              <label for="acc_type_1">
+                <span class="icon">
+                  <img src="./img/users.svg" width="24" height="24" alt="">
+                </span>
+                <span>Сельхозпредприятие</span>
+              </label>
+
+              <input type="radio" id="acc_type_2" class="btn modal__radio" name="acc_type">
+              <label for="acc_type_2">
+                <span class="icon">
+                  <img src="./img/users.svg" width="24" height="24" alt="">
+                </span>
+                <span>IT-поставщик</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="modal__form-row">
+            <div class="form-group">
+              <label for="register_email">E-mail <b class="text-danger">*</b></label>
+              <input type="email" name="register_email" id="register_email" placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="register_phone">Телефон <b class="text-danger">*</b></label>
+              <input type="tel" name="register_phone" id="register_phone" placeholder="+7 (999) 123-45-67" class="js_phone_input">
+            </div>
+          </div>
+
+          <div class="modal__form-row">
+            <div class="form-group">
+              <label for="register_password">Пароль <b class="text-danger">*</b></label>
+              <input type="password" name="register_password" id="register_password" placeholder="Введите пароль">
+            </div>
+
+            <div class="form-group">
+              <label for="register_password2">Подтвердите пароль <b class="text-danger">*</b></label>
+              <input type="password" name="register_password2" id="register_password2" placeholder="Введите пароль">
+            </div>
+          </div>
+
+          <div class="modal__info-block">
+            <p class="modal__form-title">Создание аккаунта</p>
+
+            <div class="modal__form-row">
+              <div class="form-group">
+                <label for="register_inn">ИНН организации <b class="text-danger">*</b></label>
+                <input type="text" name="register_inn" id="register_inn" placeholder="1234567890">
+              </div>
+
+              <a href="#" class="btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0449 2C16.0404 2 20.0898 6.04954 20.0898 11.0449C20.0898 13.2168 19.3238 15.2093 18.0479 16.7686L21.7354 20.4561L21.7969 20.5244C22.0866 20.8796 22.0664 21.4042 21.7354 21.7354C21.4042 22.0665 20.8797 22.0866 20.5244 21.7969L20.4551 21.7354L16.7676 18.0479C15.2084 19.3234 13.2165 20.0898 11.0449 20.0898C6.04953 20.0898 2 16.0403 2 11.0449C2.00003 6.0496 6.04955 2.00009 11.0449 2ZM11.0449 3.80859C7.04865 3.80869 3.80863 7.04868 3.80859 11.0449C3.80859 15.0412 7.04863 18.2812 11.0449 18.2812C15.0413 18.2812 18.2812 15.0412 18.2812 11.0449C18.2812 7.04862 15.0413 3.80859 11.0449 3.80859Z" fill="currentColor" />
+                </svg>
+                <span>Найти</span>
+              </a>
+            </div>
+
+            <div class="modal__form-row">
+              <div class="form-group">
+                <label for="register_company">Название хозяйства <b class="text-danger">*</b></label>
+                <input type="text" name="register_company" id="register_company" placeholder="Название хозяйства">
+              </div>
+
+              <div class="form-group">
+                <label for="register_fullname">ФИО <b class="text-danger">*</b></label>
+                <input type="text" name="register_fullname" id="register_fullname" placeholder="ФИО">
+              </div>
+            </div>
+
+            <div class="custom-select">
+              <p class="register-form__cs-label">Регион <b class="text-danger">*</b></p>
+              <div class="custom-select__selected" tabindex="0">
+                <span>Выберите регион</span>
+
+                <svg class="custom-select__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.8631 9.86321C17.2146 9.51174 17.7851 9.51174 18.1366 9.86321C18.4881 10.2147 18.4881 10.7852 18.1366 11.1367L12.6366 16.6367C12.307 16.9662 11.785 16.9866 11.4315 16.6982L11.3631 16.6367L5.86314 11.1367L5.80162 11.0683C5.51317 10.7148 5.53359 10.1928 5.86314 9.86321C6.1927 9.53366 6.71472 9.51324 7.06822 9.80169L7.13658 9.86321L11.9999 14.7265L16.8631 9.86321Z" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="custom-select__options">
+                <div class="custom-select__option" data-value="Москва" tabindex="0">Москва</div>
+                <div class="custom-select__option" data-value="Не Москва" tabindex="0">Не Москва</div>
+              </div>
+              <input type="hidden" id="credit_type" name="credit_type">
+            </div>
+          </div>
+
+          <div class="modal__form-row register-form__checkboxes">
+            <div class="modal__checkbox">
+              <input type="checkbox" id="register_confidence" name="register_confidence">
+              <label for="register_confidence"><span>Я соглашаюсь с <a href="#">пользовательским соглашением</a> и <a href="#">политикой конфиденциальности</a></span></label>
+            </div>
+
+            <div class="modal__checkbox">
+              <input type="checkbox" id="register_newsletter" name="register_newsletter">
+              <label for="register_newsletter"><span>Согласен получать персональные рекомендации решений и информацию о субсидиях</span></label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">
+            <span>Создать аккаунт</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.125 4.09961C18.2789 4.09961 20.0254 5.84609 20.0254 8V16C20.0254 18.1539 18.2789 19.9004 16.125 19.9004H11.125L11.0332 19.8955C10.5793 19.8495 10.2246 19.4661 10.2246 19C10.2246 18.5339 10.5793 18.1505 11.0332 18.1045L11.125 18.0996H16.125C17.2848 18.0996 18.2246 17.1598 18.2246 16V8C18.2246 6.8402 17.2848 5.90039 16.125 5.90039H11.125L11.0332 5.89551C10.5793 5.84953 10.2246 5.46607 10.2246 5C10.2246 4.53393 10.5793 4.15047 11.0332 4.10449L11.125 4.09961H16.125ZM10.4121 8.27637C10.7416 7.94683 11.2637 7.92645 11.6172 8.21484L11.6855 8.27637L14.7725 11.3633L14.79 11.3828C14.7979 11.3912 14.8059 11.3995 14.8135 11.4082L14.834 11.4316C14.8465 11.447 14.8558 11.4645 14.8672 11.4805C14.8812 11.5001 14.8958 11.5192 14.9082 11.54C14.9246 11.5676 14.938 11.5962 14.9512 11.625C14.9616 11.6476 14.9729 11.6698 14.9814 11.6934C14.9837 11.6995 14.9852 11.7058 14.9873 11.7119C15.018 11.8025 15.0361 11.8991 15.0361 12C15.0361 12.1006 15.0178 12.1968 14.9873 12.2871C14.9852 12.2933 14.9837 12.2996 14.9814 12.3057C14.9729 12.3293 14.9616 12.3514 14.9512 12.374C14.938 12.4028 14.9246 12.4314 14.9082 12.459C14.8958 12.4798 14.8812 12.4989 14.8672 12.5186C14.8557 12.5347 14.8466 12.5529 14.834 12.5684L14.8135 12.5908C14.8059 12.5995 14.7979 12.6078 14.79 12.6162L14.7725 12.6367L11.6855 15.7236C11.3341 16.0749 10.7635 16.075 10.4121 15.7236C10.061 15.3723 10.0612 14.8026 10.4121 14.4512L11.9619 12.9004H4.875C4.37794 12.9004 3.97461 12.4971 3.97461 12C3.97461 11.5029 4.37794 11.0996 4.875 11.0996H11.9619L10.4121 9.5498L10.3506 9.48145C10.0622 9.12801 10.0827 8.60592 10.4121 8.27637Z" fill="currentColor" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="modal__bottom">
+          <p>Уже есть аккаунт?</p>
+          <a href="#" class="modal__link" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Войти</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="forgotModal" class="modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <div class="modal__top">
+          <p class="modal__title">Добро пожаловать в Агропорт</p>
+          <p>Ваш путь к цифровизации начинается здесь</p>
+          <button type="button" class="modal__close" data-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.41357 6.41358C6.76504 6.06211 7.33544 6.06211 7.68691 6.41358L12 10.7267L16.3131 6.41358C16.6645 6.06211 17.2349 6.06211 17.5864 6.41358C17.9379 6.76505 17.9379 7.33545 17.5864 7.68692L13.2733 12L17.5864 16.3131C17.9379 16.6645 17.9379 17.2349 17.5864 17.5864C17.2349 17.9379 16.6645 17.9379 16.3131 17.5864L12 13.2733L7.68691 17.5864C7.33544 17.9379 6.76504 17.9379 6.41357 17.5864C6.0621 17.2349 6.0621 16.6645 6.41357 16.3131L10.7266 12L6.41357 7.68692C6.0621 7.33545 6.0621 6.76505 6.41357 6.41358Z" fill="white" />
+            </svg>
+          </button>
+        </div>
+
+        <form class="modal__form">
+          <div>
+            <p class="modal__form-title">Забыли пароль?</p>
+            <p class="modal__form-desc">Некий текст о том, что на почту придёт подтвержение или whatever</p>
+          </div>
+
+          <div class="form-group">
+            <label for="login_email">E-mail</label>
+            <input type="email" name="login_email" id="login_email" placeholder="your@email.com">
+          </div>
+
+          <button type="submit" class="btn">Сбросить пароль</button>
+        </form>
+
+        <div class="modal__bottom">
+          <p>Еще нет аккаунта?</p>
+          <a href="#" class="modal__link" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Зарегистрируйтесь</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>
